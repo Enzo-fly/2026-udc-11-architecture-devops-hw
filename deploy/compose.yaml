@@ -1,0 +1,35 @@
+# Поштомат громади — продакшн на одній VM (docker compose up -d).
+# PostgreSQL працює на самій VM, поза compose.
+services:
+  api:
+    image: poshtomat:latest
+    build:
+      context: ../app
+      dockerfile: ../deploy/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      TZ: "Europe/Kyiv"
+      PORT: "8080"
+      LOG_LEVEL: "info"
+      DATABASE_URL: "postgres://poshtomat@192.0.2.10:5432/poshtomat"
+      DB_POOL_MAX: "20"
+      DB_POOL_WAIT_MS: "2000"
+      SMS_BASE_URL: "https://sms.example.net/api/v2"
+      SMS_TOKEN: "CHANGE_ME"
+      SMS_RATE_PER_SEC: "20"
+      COURIER_BASE_URL: "https://courier.example.com/api/v1"
+
+  worker:
+    image: poshtomat:latest
+    command: ["node", "src/worker.js"]
+    environment:
+      TZ: "Europe/Kyiv"
+      LOG_LEVEL: "info"
+      DATABASE_URL: "postgres://poshtomat@192.0.2.10:5432/poshtomat"
+      DB_POOL_MAX: "20"
+      DB_POOL_WAIT_MS: "2000"
+      SMS_BASE_URL: "https://sms.example.net/api/v2"
+      SMS_TOKEN: "CHANGE_ME"
+      SMS_RATE_PER_SEC: "20"
+      COURIER_BASE_URL: "https://courier.example.com/api/v1"

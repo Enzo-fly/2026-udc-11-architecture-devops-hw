@@ -1,0 +1,9 @@
+# Історія розгортань poshtomat-prod-1 (docker compose: api + worker). Час — Europe/Kyiv.
+# ts                         action    version  by      note
+2026-09-17T10:12:40+03:00   deploy    v1.7.0   olena   admin: parcel list for staff (#188)
+2026-09-29T16:40:05+03:00   deploy    v1.7.1   andrii  sms: retry with backoff on 429 (#196)
+2026-10-02T11:05:51+03:00   deploy    v1.7.2   andrii  pickup: 6-digit codes (#201)
+2026-10-08T10:31:17+03:00   deploy    v1.7.3   olena   admin: mask phone numbers (#207)
+2026-10-14T14:02:00+03:00   deploy    v1.8.0   andrii  config cleanup (#212)
+2026-10-14T14:20:31+03:00   restart   v1.8.0   olena   api only, on-call
+2026-10-14T14:47:00+03:00   rollback  v1.7.3   olena   on-call, just in case

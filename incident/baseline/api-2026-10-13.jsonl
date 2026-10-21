@@ -1,0 +1,1374 @@
+{"ts":"2026-10-13T12:00:01.040+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":42}
+{"ts":"2026-10-13T12:00:52.533+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":51}
+{"ts":"2026-10-13T12:01:20.789+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":7}
+{"ts":"2026-10-13T12:01:33.215+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}
+{"ts":"2026-10-13T12:02:01.395+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":152}
+{"ts":"2026-10-13T12:02:09.159+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":33}
+{"ts":"2026-10-13T12:02:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":78}
+{"ts":"2026-10-13T12:02:23.295+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":63}
+{"ts":"2026-10-13T12:03:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":80}
+{"ts":"2026-10-13T12:03:39.580+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":117}
+{"ts":"2026-10-13T12:03:40.610+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":105}
+{"ts":"2026-10-13T12:04:03.810+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":31}
+{"ts":"2026-10-13T12:04:19.552+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":31}
+{"ts":"2026-10-13T12:04:28.231+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":82}
+{"ts":"2026-10-13T12:05:15.085+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":28}
+{"ts":"2026-10-13T12:05:16.538+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":78}
+{"ts":"2026-10-13T12:06:00.381+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":36}
+{"ts":"2026-10-13T12:06:47.636+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":33}
+{"ts":"2026-10-13T12:07:15.283+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":39}
+{"ts":"2026-10-13T12:07:57.441+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":85}
+{"ts":"2026-10-13T12:07:57.918+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":67}
+{"ts":"2026-10-13T12:08:27.167+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":30}
+{"ts":"2026-10-13T12:08:35.064+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":8}
+{"ts":"2026-10-13T12:09:15.970+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":200}
+{"ts":"2026-10-13T12:09:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":79}
+{"ts":"2026-10-13T12:09:49.210+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":45}
+{"ts":"2026-10-13T12:09:54.757+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":11}
+{"ts":"2026-10-13T12:10:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T12:10:31.138+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":67}
+{"ts":"2026-10-13T12:10:40.619+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":76}
+{"ts":"2026-10-13T12:10:47.495+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":51}
+{"ts":"2026-10-13T12:11:04.472+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":21}
+{"ts":"2026-10-13T12:11:29.485+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":48}
+{"ts":"2026-10-13T12:12:11.669+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":11}
+{"ts":"2026-10-13T12:12:15.874+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":43}
+{"ts":"2026-10-13T12:12:43.430+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T12:13:07.895+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":39}
+{"ts":"2026-10-13T12:13:10.333+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":146}
+{"ts":"2026-10-13T12:14:24.470+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":50}
+{"ts":"2026-10-13T12:14:25.099+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":67}
+{"ts":"2026-10-13T12:15:29.164+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":62}
+{"ts":"2026-10-13T12:15:31.417+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":42}
+{"ts":"2026-10-13T12:15:46.655+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":138}
+{"ts":"2026-10-13T12:16:07.301+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":91}
+{"ts":"2026-10-13T12:16:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":79}
+{"ts":"2026-10-13T12:16:27.204+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":81}
+{"ts":"2026-10-13T12:17:11.797+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":18}
+{"ts":"2026-10-13T12:17:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T12:17:53.775+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T12:18:23.282+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":88}
+{"ts":"2026-10-13T12:18:34.845+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":36}
+{"ts":"2026-10-13T12:18:44.555+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":41}
+{"ts":"2026-10-13T12:19:21.141+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":64}
+{"ts":"2026-10-13T12:19:45.438+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":49}
+{"ts":"2026-10-13T12:20:19.263+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T12:20:30.883+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":43}
+{"ts":"2026-10-13T12:20:59.806+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":50}
+{"ts":"2026-10-13T12:21:45.567+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":23}
+{"ts":"2026-10-13T12:21:58.881+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":32}
+{"ts":"2026-10-13T12:22:08.706+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T12:22:15.747+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":46}
+{"ts":"2026-10-13T12:22:16.479+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":37}
+{"ts":"2026-10-13T12:23:06.804+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":91}
+{"ts":"2026-10-13T12:23:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":79}
+{"ts":"2026-10-13T12:23:56.577+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":126}
+{"ts":"2026-10-13T12:24:14.581+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":57}
+{"ts":"2026-10-13T12:24:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":82}
+{"ts":"2026-10-13T12:24:44.807+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":40}
+{"ts":"2026-10-13T12:24:54.204+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":54}
+{"ts":"2026-10-13T12:25:13.563+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T12:25:47.497+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":97}
+{"ts":"2026-10-13T12:26:17.231+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":24}
+{"ts":"2026-10-13T12:26:52.483+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":13}
+{"ts":"2026-10-13T12:26:58.829+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":125}
+{"ts":"2026-10-13T12:27:36.922+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":71}
+{"ts":"2026-10-13T12:27:57.097+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":53}
+{"ts":"2026-10-13T12:28:07.495+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":2,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T12:28:44.009+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":141}
+{"ts":"2026-10-13T12:28:48.860+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":52}
+{"ts":"2026-10-13T12:28:56.008+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":35}
+{"ts":"2026-10-13T12:29:08.163+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":39}
+{"ts":"2026-10-13T12:29:27.196+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":89}
+{"ts":"2026-10-13T12:29:29.806+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":9,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T12:30:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":77}
+{"ts":"2026-10-13T12:30:30.622+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T12:30:55.021+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":42}
+{"ts":"2026-10-13T12:30:57.555+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":83}
+{"ts":"2026-10-13T12:31:11.698+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T12:31:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T12:31:20.413+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":104}
+{"ts":"2026-10-13T12:31:41.118+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":54}
+{"ts":"2026-10-13T12:31:49.857+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":146}
+{"ts":"2026-10-13T12:32:06.880+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":29}
+{"ts":"2026-10-13T12:32:50.521+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":25}
+{"ts":"2026-10-13T12:33:07.268+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T12:33:51.685+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":123}
+{"ts":"2026-10-13T12:33:53.473+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":129}
+{"ts":"2026-10-13T12:34:05.548+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":59}
+{"ts":"2026-10-13T12:34:26.549+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":85}
+{"ts":"2026-10-13T12:35:11.074+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":28}
+{"ts":"2026-10-13T12:35:23.337+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T12:35:56.995+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":29}
+{"ts":"2026-10-13T12:36:38.481+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":29}
+{"ts":"2026-10-13T12:36:45.124+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":56}
+{"ts":"2026-10-13T12:36:55.901+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":24}
+{"ts":"2026-10-13T12:37:02.174+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":33}
+{"ts":"2026-10-13T12:37:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":77}
+{"ts":"2026-10-13T12:37:17.636+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":38}
+{"ts":"2026-10-13T12:37:52.891+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":142}
+{"ts":"2026-10-13T12:38:15.423+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":166}
+{"ts":"2026-10-13T12:38:15.959+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":32}
+{"ts":"2026-10-13T12:38:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T12:39:09.841+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":63}
+{"ts":"2026-10-13T12:39:18.523+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":146}
+{"ts":"2026-10-13T12:39:57.992+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":39}
+{"ts":"2026-10-13T12:40:40.626+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":38}
+{"ts":"2026-10-13T12:40:48.731+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":137}
+{"ts":"2026-10-13T12:40:59.264+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":74}
+{"ts":"2026-10-13T12:41:32.304+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":22}
+{"ts":"2026-10-13T12:41:37.368+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":99}
+{"ts":"2026-10-13T12:42:08.836+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":64}
+{"ts":"2026-10-13T12:42:35.053+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":102}
+{"ts":"2026-10-13T12:42:46.031+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":11}
+{"ts":"2026-10-13T12:42:55.075+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":48}
+{"ts":"2026-10-13T12:43:12.604+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":5}
+{"ts":"2026-10-13T12:43:13.755+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":49}
+{"ts":"2026-10-13T12:44:15.838+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":103}
+{"ts":"2026-10-13T12:44:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":78}
+{"ts":"2026-10-13T12:44:34.418+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":184}
+{"ts":"2026-10-13T12:44:41.678+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":66}
+{"ts":"2026-10-13T12:45:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":80}
+{"ts":"2026-10-13T12:45:35.637+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":18}
+{"ts":"2026-10-13T12:45:48.267+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":37}
+{"ts":"2026-10-13T12:46:24.470+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":71}
+{"ts":"2026-10-13T12:46:34.188+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":40}
+{"ts":"2026-10-13T12:46:50.881+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":23}
+{"ts":"2026-10-13T12:47:13.879+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T12:47:37.987+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":53}
+{"ts":"2026-10-13T12:47:54.180+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":74}
+{"ts":"2026-10-13T12:48:18.561+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":62}
+{"ts":"2026-10-13T12:48:30.301+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":86}
+{"ts":"2026-10-13T12:48:55.991+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":11}
+{"ts":"2026-10-13T12:49:28.688+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":71}
+{"ts":"2026-10-13T12:49:31.929+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":55}
+{"ts":"2026-10-13T12:49:37.465+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":82}
+{"ts":"2026-10-13T12:50:23.256+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":92}
+{"ts":"2026-10-13T12:50:35.979+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":49}
+{"ts":"2026-10-13T12:50:40.097+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":26}
+{"ts":"2026-10-13T12:51:12.450+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":184}
+{"ts":"2026-10-13T12:51:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":75}
+{"ts":"2026-10-13T12:51:26.516+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":32}
+{"ts":"2026-10-13T12:51:42.017+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":18}
+{"ts":"2026-10-13T12:52:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T12:52:19.031+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":19}
+{"ts":"2026-10-13T12:52:53.786+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":183}
+{"ts":"2026-10-13T12:52:58.474+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T12:53:13.475+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":113}
+{"ts":"2026-10-13T12:53:13.691+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":58}
+{"ts":"2026-10-13T12:53:28.339+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":11}
+{"ts":"2026-10-13T12:54:22.071+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":28}
+{"ts":"2026-10-13T12:54:22.650+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":46}
+{"ts":"2026-10-13T12:54:24.188+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":33}
+{"ts":"2026-10-13T12:54:41.641+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":62}
+{"ts":"2026-10-13T12:55:28.772+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":112}
+{"ts":"2026-10-13T12:55:38.125+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":90}
+{"ts":"2026-10-13T12:55:48.648+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":89}
+{"ts":"2026-10-13T12:56:11.624+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":28}
+{"ts":"2026-10-13T12:56:21.222+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":26}
+{"ts":"2026-10-13T12:56:32.068+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":10,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T12:56:46.098+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":82}
+{"ts":"2026-10-13T12:56:58.726+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":69}
+{"ts":"2026-10-13T12:57:08.280+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":173}
+{"ts":"2026-10-13T12:57:33.461+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":32}
+{"ts":"2026-10-13T12:57:50.515+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T12:58:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":77}
+{"ts":"2026-10-13T12:58:22.308+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":127}
+{"ts":"2026-10-13T12:58:25.023+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T12:58:31.935+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":56}
+{"ts":"2026-10-13T12:58:32.553+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":23}
+{"ts":"2026-10-13T12:58:35.712+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":67}
+{"ts":"2026-10-13T12:59:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":82}
+{"ts":"2026-10-13T12:59:21.149+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":38}
+{"ts":"2026-10-13T12:59:21.580+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":53}
+{"ts":"2026-10-13T12:59:46.364+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":8,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T12:59:50.815+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":95}
+{"ts":"2026-10-13T12:59:57.346+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":21}
+{"ts":"2026-10-13T13:00:02.787+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":75}
+{"ts":"2026-10-13T13:00:25.017+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":63}
+{"ts":"2026-10-13T13:00:36.495+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":101}
+{"ts":"2026-10-13T13:00:58.920+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":69}
+{"ts":"2026-10-13T13:01:05.662+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":33}
+{"ts":"2026-10-13T13:01:36.698+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":72}
+{"ts":"2026-10-13T13:01:37.881+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":13}
+{"ts":"2026-10-13T13:01:47.913+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":85}
+{"ts":"2026-10-13T13:02:26.164+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":67}
+{"ts":"2026-10-13T13:02:27.916+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":102}
+{"ts":"2026-10-13T13:02:44.326+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":81}
+{"ts":"2026-10-13T13:02:44.882+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":64}
+{"ts":"2026-10-13T13:03:25.963+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":98}
+{"ts":"2026-10-13T13:03:38.581+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":41}
+{"ts":"2026-10-13T13:03:42.155+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":79}
+{"ts":"2026-10-13T13:03:59.969+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":12}
+{"ts":"2026-10-13T13:04:08.111+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":137}
+{"ts":"2026-10-13T13:04:14.225+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":39}
+{"ts":"2026-10-13T13:04:18.793+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":21}
+{"ts":"2026-10-13T13:04:54.142+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":56}
+{"ts":"2026-10-13T13:05:01.696+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":28}
+{"ts":"2026-10-13T13:05:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":76}
+{"ts":"2026-10-13T13:05:17.640+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":64}
+{"ts":"2026-10-13T13:05:19.036+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":151}
+{"ts":"2026-10-13T13:05:29.044+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":12}
+{"ts":"2026-10-13T13:05:36.986+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":53}
+{"ts":"2026-10-13T13:06:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T13:06:24.063+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":30}
+{"ts":"2026-10-13T13:06:24.643+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":117}
+{"ts":"2026-10-13T13:06:33.077+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":137}
+{"ts":"2026-10-13T13:06:47.221+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":25}
+{"ts":"2026-10-13T13:07:12.346+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":116}
+{"ts":"2026-10-13T13:07:20.390+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:07:26.149+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":28}
+{"ts":"2026-10-13T13:07:29.133+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":100}
+{"ts":"2026-10-13T13:07:41.241+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":19}
+{"ts":"2026-10-13T13:07:43.992+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":47}
+{"ts":"2026-10-13T13:08:13.713+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":214}
+{"ts":"2026-10-13T13:08:31.601+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":87}
+{"ts":"2026-10-13T13:08:32.485+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":27}
+{"ts":"2026-10-13T13:08:34.071+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":24}
+{"ts":"2026-10-13T13:09:08.029+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":5,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:09:09.213+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":76}
+{"ts":"2026-10-13T13:09:23.643+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":71}
+{"ts":"2026-10-13T13:09:47.819+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":30}
+{"ts":"2026-10-13T13:09:50.381+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":37}
+{"ts":"2026-10-13T13:09:52.847+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":142}
+{"ts":"2026-10-13T13:10:18.672+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":74}
+{"ts":"2026-10-13T13:10:23.750+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":65}
+{"ts":"2026-10-13T13:10:30.638+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":17}
+{"ts":"2026-10-13T13:10:51.063+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":232}
+{"ts":"2026-10-13T13:10:57.066+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":82}
+{"ts":"2026-10-13T13:11:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":75}
+{"ts":"2026-10-13T13:11:23.486+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":79}
+{"ts":"2026-10-13T13:11:40.845+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":123}
+{"ts":"2026-10-13T13:11:46.072+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":180}
+{"ts":"2026-10-13T13:11:52.669+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":135}
+{"ts":"2026-10-13T13:11:54.751+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":71}
+{"ts":"2026-10-13T13:12:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":77}
+{"ts":"2026-10-13T13:12:23.289+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":27}
+{"ts":"2026-10-13T13:12:26.216+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":41}
+{"ts":"2026-10-13T13:12:28.248+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":84}
+{"ts":"2026-10-13T13:12:48.599+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":50}
+{"ts":"2026-10-13T13:12:53.922+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":65}
+{"ts":"2026-10-13T13:13:00.894+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":29}
+{"ts":"2026-10-13T13:13:02.143+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":197}
+{"ts":"2026-10-13T13:13:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T13:13:25.681+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":34}
+{"ts":"2026-10-13T13:13:41.643+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":119}
+{"ts":"2026-10-13T13:13:42.768+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":51}
+{"ts":"2026-10-13T13:14:03.428+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":137}
+{"ts":"2026-10-13T13:14:07.744+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":125}
+{"ts":"2026-10-13T13:14:14.430+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":225}
+{"ts":"2026-10-13T13:14:19.183+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":28}
+{"ts":"2026-10-13T13:14:27.883+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":94}
+{"ts":"2026-10-13T13:14:33.805+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":48}
+{"ts":"2026-10-13T13:15:06.135+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":65}
+{"ts":"2026-10-13T13:15:17.311+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":40}
+{"ts":"2026-10-13T13:15:18.417+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":43}
+{"ts":"2026-10-13T13:15:32.174+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":126}
+{"ts":"2026-10-13T13:15:33.211+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":155}
+{"ts":"2026-10-13T13:16:08.947+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":79}
+{"ts":"2026-10-13T13:16:17.696+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":133}
+{"ts":"2026-10-13T13:16:19.874+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":61}
+{"ts":"2026-10-13T13:16:25.639+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":31}
+{"ts":"2026-10-13T13:16:36.001+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":99}
+{"ts":"2026-10-13T13:16:41.406+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":8,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:16:46.468+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:16:47.778+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":18}
+{"ts":"2026-10-13T13:17:14.459+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":58}
+{"ts":"2026-10-13T13:17:23.987+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T13:17:27.060+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":10}
+{"ts":"2026-10-13T13:17:32.469+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":69}
+{"ts":"2026-10-13T13:17:48.729+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":39}
+{"ts":"2026-10-13T13:18:10.240+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":65}
+{"ts":"2026-10-13T13:18:14.684+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":197}
+{"ts":"2026-10-13T13:18:20.061+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":63}
+{"ts":"2026-10-13T13:18:22.053+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":163}
+{"ts":"2026-10-13T13:18:47.001+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":52}
+{"ts":"2026-10-13T13:18:58.284+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":16}
+{"ts":"2026-10-13T13:19:01.142+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":103}
+{"ts":"2026-10-13T13:19:04.700+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":29}
+{"ts":"2026-10-13T13:19:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":76}
+{"ts":"2026-10-13T13:19:34.145+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":10}
+{"ts":"2026-10-13T13:19:34.840+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":57}
+{"ts":"2026-10-13T13:19:35.599+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":45}
+{"ts":"2026-10-13T13:20:00.553+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":21}
+{"ts":"2026-10-13T13:20:02.166+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":39}
+{"ts":"2026-10-13T13:20:02.417+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":38}
+{"ts":"2026-10-13T13:20:09.944+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":92}
+{"ts":"2026-10-13T13:20:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":80}
+{"ts":"2026-10-13T13:20:17.930+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":49}
+{"ts":"2026-10-13T13:20:21.244+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":159}
+{"ts":"2026-10-13T13:21:06.556+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":46}
+{"ts":"2026-10-13T13:21:11.114+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":5}
+{"ts":"2026-10-13T13:21:23.452+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":39}
+{"ts":"2026-10-13T13:21:36.522+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":27}
+{"ts":"2026-10-13T13:21:56.607+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":89}
+{"ts":"2026-10-13T13:21:59.482+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":88}
+{"ts":"2026-10-13T13:22:22.046+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":117}
+{"ts":"2026-10-13T13:22:30.240+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":53}
+{"ts":"2026-10-13T13:22:32.407+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":46}
+{"ts":"2026-10-13T13:22:34.044+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":74}
+{"ts":"2026-10-13T13:22:50.182+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":27}
+{"ts":"2026-10-13T13:22:52.356+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":44}
+{"ts":"2026-10-13T13:23:05.642+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":91}
+{"ts":"2026-10-13T13:23:07.794+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":16}
+{"ts":"2026-10-13T13:23:08.121+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":89}
+{"ts":"2026-10-13T13:23:24.012+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":4,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:23:25.764+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":137}
+{"ts":"2026-10-13T13:23:36.991+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":30}
+{"ts":"2026-10-13T13:23:48.609+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":39}
+{"ts":"2026-10-13T13:24:00.861+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":65}
+{"ts":"2026-10-13T13:24:01.283+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":13}
+{"ts":"2026-10-13T13:24:29.643+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":290}
+{"ts":"2026-10-13T13:24:37.978+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":15}
+{"ts":"2026-10-13T13:24:38.278+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":96}
+{"ts":"2026-10-13T13:24:49.022+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":72}
+{"ts":"2026-10-13T13:24:56.045+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":4,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:25:00.893+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":24}
+{"ts":"2026-10-13T13:25:13.029+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:25:32.180+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":166}
+{"ts":"2026-10-13T13:25:33.193+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":49}
+{"ts":"2026-10-13T13:25:41.838+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":174}
+{"ts":"2026-10-13T13:25:42.412+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":29}
+{"ts":"2026-10-13T13:25:58.274+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":51}
+{"ts":"2026-10-13T13:26:03.395+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":120}
+{"ts":"2026-10-13T13:26:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":78}
+{"ts":"2026-10-13T13:26:18.677+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":37}
+{"ts":"2026-10-13T13:26:38.065+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":42}
+{"ts":"2026-10-13T13:26:39.527+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":20}
+{"ts":"2026-10-13T13:26:44.164+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":38}
+{"ts":"2026-10-13T13:26:59.370+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":92}
+{"ts":"2026-10-13T13:27:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T13:27:26.854+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":22}
+{"ts":"2026-10-13T13:27:29.592+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":39}
+{"ts":"2026-10-13T13:27:29.880+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":55}
+{"ts":"2026-10-13T13:27:39.902+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":108}
+{"ts":"2026-10-13T13:27:49.462+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":105}
+{"ts":"2026-10-13T13:27:53.474+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":46}
+{"ts":"2026-10-13T13:28:15.912+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T13:28:43.975+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":76}
+{"ts":"2026-10-13T13:28:48.379+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":41}
+{"ts":"2026-10-13T13:28:53.667+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":102}
+{"ts":"2026-10-13T13:28:54.935+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":105}
+{"ts":"2026-10-13T13:28:54.982+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":74}
+{"ts":"2026-10-13T13:28:56.046+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":31}
+{"ts":"2026-10-13T13:29:09.439+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":4,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:29:26.799+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:29:30.251+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":37}
+{"ts":"2026-10-13T13:29:38.508+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":37}
+{"ts":"2026-10-13T13:29:41.321+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":94}
+{"ts":"2026-10-13T13:29:41.779+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":78}
+{"ts":"2026-10-13T13:29:53.434+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":24}
+{"ts":"2026-10-13T13:29:57.957+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":144}
+{"ts":"2026-10-13T13:30:01.848+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":29}
+{"ts":"2026-10-13T13:30:09.480+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":26}
+{"ts":"2026-10-13T13:30:19.966+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":11}
+{"ts":"2026-10-13T13:30:30.717+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":186}
+{"ts":"2026-10-13T13:30:32.526+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":67}
+{"ts":"2026-10-13T13:30:41.512+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":123}
+{"ts":"2026-10-13T13:30:51.305+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":108}
+{"ts":"2026-10-13T13:31:35.489+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":38}
+{"ts":"2026-10-13T13:31:37.435+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":77}
+{"ts":"2026-10-13T13:31:41.511+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":104}
+{"ts":"2026-10-13T13:31:46.403+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":120}
+{"ts":"2026-10-13T13:31:47.817+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":33}
+{"ts":"2026-10-13T13:31:47.997+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":19}
+{"ts":"2026-10-13T13:32:01.840+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":188}
+{"ts":"2026-10-13T13:32:07.299+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":46}
+{"ts":"2026-10-13T13:32:08.144+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:32:35.339+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":55}
+{"ts":"2026-10-13T13:32:40.907+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":50}
+{"ts":"2026-10-13T13:32:47.807+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":10}
+{"ts":"2026-10-13T13:32:49.350+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":62}
+{"ts":"2026-10-13T13:32:52.253+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":37}
+{"ts":"2026-10-13T13:33:10.425+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:33:16.120+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":36}
+{"ts":"2026-10-13T13:33:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":77}
+{"ts":"2026-10-13T13:33:17.382+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":64}
+{"ts":"2026-10-13T13:33:18.284+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":43}
+{"ts":"2026-10-13T13:33:21.168+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":64}
+{"ts":"2026-10-13T13:33:44.299+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":4,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:33:49.843+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":37}
+{"ts":"2026-10-13T13:33:50.301+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":80}
+{"ts":"2026-10-13T13:34:08.844+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":110}
+{"ts":"2026-10-13T13:34:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":80}
+{"ts":"2026-10-13T13:34:18.156+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":125}
+{"ts":"2026-10-13T13:34:19.052+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":29}
+{"ts":"2026-10-13T13:34:19.303+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":19}
+{"ts":"2026-10-13T13:34:27.200+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":65}
+{"ts":"2026-10-13T13:34:31.174+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T13:34:42.473+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:34:52.290+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":49}
+{"ts":"2026-10-13T13:35:06.413+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":90}
+{"ts":"2026-10-13T13:35:09.531+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":50}
+{"ts":"2026-10-13T13:35:16.717+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":400,"ms":3}
+{"ts":"2026-10-13T13:35:24.715+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":76}
+{"ts":"2026-10-13T13:35:34.426+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":114}
+{"ts":"2026-10-13T13:35:46.046+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":45}
+{"ts":"2026-10-13T13:35:55.552+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":232}
+{"ts":"2026-10-13T13:36:07.422+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":55}
+{"ts":"2026-10-13T13:36:13.872+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":90}
+{"ts":"2026-10-13T13:36:15.530+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":221}
+{"ts":"2026-10-13T13:36:18.765+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":176}
+{"ts":"2026-10-13T13:36:24.471+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":67}
+{"ts":"2026-10-13T13:36:44.500+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":17}
+{"ts":"2026-10-13T13:36:52.138+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":7,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:36:53.995+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":46}
+{"ts":"2026-10-13T13:37:01.876+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":42}
+{"ts":"2026-10-13T13:37:15.040+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":17}
+{"ts":"2026-10-13T13:37:58.099+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":52}
+{"ts":"2026-10-13T13:37:58.833+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":90}
+{"ts":"2026-10-13T13:37:59.631+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":46}
+{"ts":"2026-10-13T13:37:59.919+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":19}
+{"ts":"2026-10-13T13:38:17.690+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":45}
+{"ts":"2026-10-13T13:38:19.505+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":22}
+{"ts":"2026-10-13T13:38:22.287+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":77}
+{"ts":"2026-10-13T13:38:26.505+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":5,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:38:34.337+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":98}
+{"ts":"2026-10-13T13:38:34.690+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":23}
+{"ts":"2026-10-13T13:38:38.396+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":108}
+{"ts":"2026-10-13T13:38:39.025+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":123}
+{"ts":"2026-10-13T13:38:59.278+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":9,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:39:07.948+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":62}
+{"ts":"2026-10-13T13:39:09.181+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":42}
+{"ts":"2026-10-13T13:39:09.962+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:39:18.256+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":194}
+{"ts":"2026-10-13T13:39:21.379+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":72}
+{"ts":"2026-10-13T13:39:35.259+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:39:37.922+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":103}
+{"ts":"2026-10-13T13:39:39.227+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T13:39:51.405+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":84}
+{"ts":"2026-10-13T13:40:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":78}
+{"ts":"2026-10-13T13:40:18.495+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:40:23.181+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":28}
+{"ts":"2026-10-13T13:40:31.839+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":32}
+{"ts":"2026-10-13T13:40:35.996+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":35}
+{"ts":"2026-10-13T13:40:40.678+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":54}
+{"ts":"2026-10-13T13:40:44.477+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":29}
+{"ts":"2026-10-13T13:40:48.315+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":98}
+{"ts":"2026-10-13T13:40:50.855+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":71}
+{"ts":"2026-10-13T13:41:05.991+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":70}
+{"ts":"2026-10-13T13:41:13.075+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":181}
+{"ts":"2026-10-13T13:41:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":82}
+{"ts":"2026-10-13T13:41:21.798+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":80}
+{"ts":"2026-10-13T13:41:23.978+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":92}
+{"ts":"2026-10-13T13:41:29.565+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":171}
+{"ts":"2026-10-13T13:41:44.197+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":105}
+{"ts":"2026-10-13T13:41:55.071+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":50}
+{"ts":"2026-10-13T13:42:09.824+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T13:42:27.358+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":88}
+{"ts":"2026-10-13T13:42:30.740+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":119}
+{"ts":"2026-10-13T13:42:36.682+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":49}
+{"ts":"2026-10-13T13:42:41.094+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":25}
+{"ts":"2026-10-13T13:42:41.228+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":8,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:42:47.342+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":155}
+{"ts":"2026-10-13T13:42:59.883+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":5,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:43:11.937+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T13:43:12.588+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":47}
+{"ts":"2026-10-13T13:43:18.173+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":202}
+{"ts":"2026-10-13T13:43:23.348+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":42}
+{"ts":"2026-10-13T13:43:29.779+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":77}
+{"ts":"2026-10-13T13:43:31.146+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":31}
+{"ts":"2026-10-13T13:43:31.766+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":4,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:43:55.014+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":58}
+{"ts":"2026-10-13T13:44:03.416+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:44:05.121+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":134}
+{"ts":"2026-10-13T13:44:18.553+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:44:18.709+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":96}
+{"ts":"2026-10-13T13:44:20.155+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":52}
+{"ts":"2026-10-13T13:44:20.678+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":49}
+{"ts":"2026-10-13T13:44:21.236+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":6}
+{"ts":"2026-10-13T13:44:25.062+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":29}
+{"ts":"2026-10-13T13:44:34.080+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":9,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:44:40.261+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T13:44:57.133+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:45:01.409+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":30}
+{"ts":"2026-10-13T13:45:17.005+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":43}
+{"ts":"2026-10-13T13:45:36.416+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":155}
+{"ts":"2026-10-13T13:45:40.107+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":32}
+{"ts":"2026-10-13T13:45:40.645+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":212}
+{"ts":"2026-10-13T13:45:48.572+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":135}
+{"ts":"2026-10-13T13:45:52.867+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":103}
+{"ts":"2026-10-13T13:46:02.080+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":75}
+{"ts":"2026-10-13T13:46:05.135+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:46:16.075+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":2,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:46:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":76}
+{"ts":"2026-10-13T13:46:19.192+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":55}
+{"ts":"2026-10-13T13:46:19.821+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":137}
+{"ts":"2026-10-13T13:46:26.970+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":45}
+{"ts":"2026-10-13T13:46:27.052+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":130}
+{"ts":"2026-10-13T13:46:32.082+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":196}
+{"ts":"2026-10-13T13:46:48.179+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T13:46:58.528+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":69}
+{"ts":"2026-10-13T13:47:06.856+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":101}
+{"ts":"2026-10-13T13:47:09.647+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":73}
+{"ts":"2026-10-13T13:47:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":76}
+{"ts":"2026-10-13T13:47:33.471+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T13:47:39.546+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":65}
+{"ts":"2026-10-13T13:47:41.050+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:47:42.978+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":118}
+{"ts":"2026-10-13T13:47:46.013+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":59}
+{"ts":"2026-10-13T13:47:46.015+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":10}
+{"ts":"2026-10-13T13:48:09.511+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":100}
+{"ts":"2026-10-13T13:48:13.166+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":62}
+{"ts":"2026-10-13T13:48:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":82}
+{"ts":"2026-10-13T13:48:31.415+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":50}
+{"ts":"2026-10-13T13:48:32.964+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":24}
+{"ts":"2026-10-13T13:48:35.658+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":96}
+{"ts":"2026-10-13T13:48:44.035+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":172}
+{"ts":"2026-10-13T13:48:46.281+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":87}
+{"ts":"2026-10-13T13:49:02.072+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":124}
+{"ts":"2026-10-13T13:49:06.071+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":11}
+{"ts":"2026-10-13T13:49:40.216+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":103}
+{"ts":"2026-10-13T13:49:41.526+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":25}
+{"ts":"2026-10-13T13:49:44.342+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":70}
+{"ts":"2026-10-13T13:49:49.362+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":68}
+{"ts":"2026-10-13T13:49:52.783+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":5,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:49:55.518+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":66}
+{"ts":"2026-10-13T13:50:01.478+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":178}
+{"ts":"2026-10-13T13:50:04.543+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":37}
+{"ts":"2026-10-13T13:50:06.755+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":168}
+{"ts":"2026-10-13T13:50:12.996+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":400,"ms":5}
+{"ts":"2026-10-13T13:50:19.801+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":117}
+{"ts":"2026-10-13T13:50:28.755+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":19}
+{"ts":"2026-10-13T13:50:39.575+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:50:40.317+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}
+{"ts":"2026-10-13T13:50:45.056+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:50:45.603+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":4,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:51:01.201+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":47}
+{"ts":"2026-10-13T13:51:18.652+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:51:24.634+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":48}
+{"ts":"2026-10-13T13:51:29.197+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":63}
+{"ts":"2026-10-13T13:51:35.134+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":60}
+{"ts":"2026-10-13T13:51:35.701+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":33}
+{"ts":"2026-10-13T13:51:56.804+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":19}
+{"ts":"2026-10-13T13:51:57.550+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":34}
+{"ts":"2026-10-13T13:52:10.116+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:52:14.457+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":152}
+{"ts":"2026-10-13T13:52:18.054+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":114}
+{"ts":"2026-10-13T13:52:21.824+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":44}
+{"ts":"2026-10-13T13:52:31.892+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":119}
+{"ts":"2026-10-13T13:52:33.394+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":400,"ms":1}
+{"ts":"2026-10-13T13:52:36.187+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":17}
+{"ts":"2026-10-13T13:52:49.008+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":84}
+{"ts":"2026-10-13T13:53:01.833+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":10,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:53:05.478+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":32}
+{"ts":"2026-10-13T13:53:13.613+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}
+{"ts":"2026-10-13T13:53:19.342+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":43}
+{"ts":"2026-10-13T13:53:27.381+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":78}
+{"ts":"2026-10-13T13:53:38.941+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":80}
+{"ts":"2026-10-13T13:53:45.828+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":91}
+{"ts":"2026-10-13T13:54:02.750+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":40}
+{"ts":"2026-10-13T13:54:06.515+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":184}
+{"ts":"2026-10-13T13:54:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":76}
+{"ts":"2026-10-13T13:54:18.477+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":73}
+{"ts":"2026-10-13T13:54:37.257+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":64}
+{"ts":"2026-10-13T13:54:45.492+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":43}
+{"ts":"2026-10-13T13:54:49.260+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":82}
+{"ts":"2026-10-13T13:54:54.905+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:54:54.992+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":33}
+{"ts":"2026-10-13T13:55:04.134+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":2,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:55:10.254+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":53}
+{"ts":"2026-10-13T13:55:17.031+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":10,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:55:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T13:55:21.959+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":8}
+{"ts":"2026-10-13T13:55:22.115+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:55:26.490+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":62}
+{"ts":"2026-10-13T13:55:32.476+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":165}
+{"ts":"2026-10-13T13:55:32.546+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":101}
+{"ts":"2026-10-13T13:55:38.093+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":9,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:55:47.568+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":108}
+{"ts":"2026-10-13T13:55:47.959+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":90}
+{"ts":"2026-10-13T13:55:49.350+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":54}
+{"ts":"2026-10-13T13:56:12.566+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":25}
+{"ts":"2026-10-13T13:56:14.480+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":20}
+{"ts":"2026-10-13T13:56:35.728+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":103}
+{"ts":"2026-10-13T13:56:35.730+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":54}
+{"ts":"2026-10-13T13:56:49.432+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":93}
+{"ts":"2026-10-13T13:56:53.177+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":240}
+{"ts":"2026-10-13T13:56:57.370+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":193}
+{"ts":"2026-10-13T13:57:08.222+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":13}
+{"ts":"2026-10-13T13:57:09.304+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":135}
+{"ts":"2026-10-13T13:57:22.467+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":17}
+{"ts":"2026-10-13T13:57:27.621+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":285}
+{"ts":"2026-10-13T13:57:28.445+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":51}
+{"ts":"2026-10-13T13:57:32.310+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:57:33.734+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":90}
+{"ts":"2026-10-13T13:57:36.938+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":58}
+{"ts":"2026-10-13T13:58:01.704+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":164}
+{"ts":"2026-10-13T13:58:07.976+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":220}
+{"ts":"2026-10-13T13:58:11.145+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":33}
+{"ts":"2026-10-13T13:58:17.730+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":247}
+{"ts":"2026-10-13T13:58:28.327+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":72}
+{"ts":"2026-10-13T13:58:36.668+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":97}
+{"ts":"2026-10-13T13:58:38.987+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":7}
+{"ts":"2026-10-13T13:58:55.293+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":115}
+{"ts":"2026-10-13T13:59:05.931+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":141}
+{"ts":"2026-10-13T13:59:14.188+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":7,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T13:59:16.710+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":154}
+{"ts":"2026-10-13T13:59:18.597+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":46}
+{"ts":"2026-10-13T13:59:42.057+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":122}
+{"ts":"2026-10-13T13:59:42.328+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":29}
+{"ts":"2026-10-13T13:59:44.302+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":165}
+{"ts":"2026-10-13T13:59:52.145+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":73}
+{"ts":"2026-10-13T14:00:04.368+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":85}
+{"ts":"2026-10-13T14:00:05.365+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":57}
+{"ts":"2026-10-13T14:00:08.430+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T14:00:13.705+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":46}
+{"ts":"2026-10-13T14:00:22.129+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":58}
+{"ts":"2026-10-13T14:00:28.080+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":84}
+{"ts":"2026-10-13T14:00:51.792+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":400,"ms":4}
+{"ts":"2026-10-13T14:01:00.844+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":48}
+{"ts":"2026-10-13T14:01:09.647+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":156}
+{"ts":"2026-10-13T14:01:11.188+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":22}
+{"ts":"2026-10-13T14:01:13.000+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":73}
+{"ts":"2026-10-13T14:01:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":77}
+{"ts":"2026-10-13T14:01:25.679+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":98}
+{"ts":"2026-10-13T14:01:27.202+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:01:51.820+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":191}
+{"ts":"2026-10-13T14:01:52.792+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":36}
+{"ts":"2026-10-13T14:01:56.808+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":83}
+{"ts":"2026-10-13T14:02:02.141+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:02:02.268+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":122}
+{"ts":"2026-10-13T14:02:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":82}
+{"ts":"2026-10-13T14:02:26.292+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}
+{"ts":"2026-10-13T14:02:28.338+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":145}
+{"ts":"2026-10-13T14:02:32.688+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":7}
+{"ts":"2026-10-13T14:02:42.094+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":104}
+{"ts":"2026-10-13T14:02:53.245+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":33}
+{"ts":"2026-10-13T14:02:57.540+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":38}
+{"ts":"2026-10-13T14:03:00.367+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":153}
+{"ts":"2026-10-13T14:03:02.721+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":122}
+{"ts":"2026-10-13T14:03:07.318+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":26}
+{"ts":"2026-10-13T14:03:23.359+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":73}
+{"ts":"2026-10-13T14:03:28.911+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":123}
+{"ts":"2026-10-13T14:03:38.890+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:03:51.544+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":64}
+{"ts":"2026-10-13T14:03:59.660+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":112}
+{"ts":"2026-10-13T14:04:07.371+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":34}
+{"ts":"2026-10-13T14:04:10.523+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":41}
+{"ts":"2026-10-13T14:04:13.007+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":140}
+{"ts":"2026-10-13T14:04:17.031+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":90}
+{"ts":"2026-10-13T14:04:26.747+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":12}
+{"ts":"2026-10-13T14:04:33.924+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":17}
+{"ts":"2026-10-13T14:04:47.243+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":177}
+{"ts":"2026-10-13T14:04:57.982+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":120}
+{"ts":"2026-10-13T14:05:03.406+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":32}
+{"ts":"2026-10-13T14:05:03.729+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":41}
+{"ts":"2026-10-13T14:05:03.992+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":11,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:05:26.744+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":73}
+{"ts":"2026-10-13T14:05:34.887+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":33}
+{"ts":"2026-10-13T14:05:38.871+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":67}
+{"ts":"2026-10-13T14:05:44.259+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":27}
+{"ts":"2026-10-13T14:05:59.308+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":158}
+{"ts":"2026-10-13T14:06:07.103+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":68}
+{"ts":"2026-10-13T14:06:11.012+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":207}
+{"ts":"2026-10-13T14:06:26.296+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":49}
+{"ts":"2026-10-13T14:06:43.974+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":52}
+{"ts":"2026-10-13T14:06:45.351+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":93}
+{"ts":"2026-10-13T14:06:49.497+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:06:56.493+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":94}
+{"ts":"2026-10-13T14:07:04.826+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":44}
+{"ts":"2026-10-13T14:07:19.966+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":18}
+{"ts":"2026-10-13T14:07:32.931+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":238}
+{"ts":"2026-10-13T14:07:38.256+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":207}
+{"ts":"2026-10-13T14:07:48.900+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:07:55.297+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":116}
+{"ts":"2026-10-13T14:07:55.569+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":27}
+{"ts":"2026-10-13T14:07:57.188+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":184}
+{"ts":"2026-10-13T14:08:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":77}
+{"ts":"2026-10-13T14:08:26.201+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":64}
+{"ts":"2026-10-13T14:08:29.826+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":24}
+{"ts":"2026-10-13T14:08:34.439+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":49}
+{"ts":"2026-10-13T14:08:35.958+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":14}
+{"ts":"2026-10-13T14:08:37.853+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":143}
+{"ts":"2026-10-13T14:08:45.737+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":194}
+{"ts":"2026-10-13T14:08:48.144+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":50}
+{"ts":"2026-10-13T14:08:58.072+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":67}
+{"ts":"2026-10-13T14:09:07.970+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":7,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:09:13.443+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:09:13.888+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":2,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:09:16.325+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":4,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:09:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T14:09:25.285+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":77}
+{"ts":"2026-10-13T14:09:27.952+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":8}
+{"ts":"2026-10-13T14:09:30.362+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":31}
+{"ts":"2026-10-13T14:09:33.498+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":367}
+{"ts":"2026-10-13T14:09:35.093+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":71}
+{"ts":"2026-10-13T14:09:39.765+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":9}
+{"ts":"2026-10-13T14:09:40.333+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":86}
+{"ts":"2026-10-13T14:10:02.727+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:10:03.412+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":74}
+{"ts":"2026-10-13T14:10:05.479+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":52}
+{"ts":"2026-10-13T14:10:08.771+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:10:09.250+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":67}
+{"ts":"2026-10-13T14:10:12.750+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":175}
+{"ts":"2026-10-13T14:10:33.477+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":12}
+{"ts":"2026-10-13T14:10:45.298+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":38}
+{"ts":"2026-10-13T14:10:56.206+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}
+{"ts":"2026-10-13T14:10:57.002+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:11:08.324+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":25}
+{"ts":"2026-10-13T14:11:12.930+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":29}
+{"ts":"2026-10-13T14:11:14.385+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":92}
+{"ts":"2026-10-13T14:11:19.802+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":30}
+{"ts":"2026-10-13T14:11:28.029+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":2,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:11:30.504+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":210}
+{"ts":"2026-10-13T14:11:54.529+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":46}
+{"ts":"2026-10-13T14:11:54.880+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":45}
+{"ts":"2026-10-13T14:12:03.339+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":41}
+{"ts":"2026-10-13T14:12:23.162+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":67}
+{"ts":"2026-10-13T14:12:25.197+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":31}
+{"ts":"2026-10-13T14:12:26.551+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":78}
+{"ts":"2026-10-13T14:12:26.621+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":53}
+{"ts":"2026-10-13T14:12:28.803+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":105}
+{"ts":"2026-10-13T14:12:37.111+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":111}
+{"ts":"2026-10-13T14:12:57.009+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":43}
+{"ts":"2026-10-13T14:13:04.521+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:13:05.635+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":59}
+{"ts":"2026-10-13T14:13:09.047+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":68}
+{"ts":"2026-10-13T14:13:12.867+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":63}
+{"ts":"2026-10-13T14:13:16.440+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":30}
+{"ts":"2026-10-13T14:13:41.829+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":92}
+{"ts":"2026-10-13T14:13:45.275+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":205}
+{"ts":"2026-10-13T14:13:54.965+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":68}
+{"ts":"2026-10-13T14:14:06.510+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":36}
+{"ts":"2026-10-13T14:14:09.179+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":85}
+{"ts":"2026-10-13T14:14:25.153+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":76}
+{"ts":"2026-10-13T14:14:37.138+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":113}
+{"ts":"2026-10-13T14:14:43.935+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":141}
+{"ts":"2026-10-13T14:14:51.075+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":5,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:14:51.789+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":215}
+{"ts":"2026-10-13T14:14:54.613+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":36}
+{"ts":"2026-10-13T14:15:06.479+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":11}
+{"ts":"2026-10-13T14:15:08.710+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":55}
+{"ts":"2026-10-13T14:15:16.458+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":90}
+{"ts":"2026-10-13T14:15:16.797+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":109}
+{"ts":"2026-10-13T14:15:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":75}
+{"ts":"2026-10-13T14:15:19.968+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:15:22.264+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":71}
+{"ts":"2026-10-13T14:15:38.614+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":76}
+{"ts":"2026-10-13T14:15:40.143+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":32}
+{"ts":"2026-10-13T14:16:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":80}
+{"ts":"2026-10-13T14:16:17.499+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":18}
+{"ts":"2026-10-13T14:16:26.185+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":17}
+{"ts":"2026-10-13T14:16:36.998+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":70}
+{"ts":"2026-10-13T14:16:40.304+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":52}
+{"ts":"2026-10-13T14:16:42.669+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":75}
+{"ts":"2026-10-13T14:16:46.764+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":74}
+{"ts":"2026-10-13T14:16:49.087+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:16:50.824+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":11,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:16:52.547+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T14:17:01.132+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":144}
+{"ts":"2026-10-13T14:17:14.311+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":38}
+{"ts":"2026-10-13T14:17:35.900+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:17:36.754+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":82}
+{"ts":"2026-10-13T14:17:40.677+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":123}
+{"ts":"2026-10-13T14:17:47.497+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":7,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:17:52.159+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":28}
+{"ts":"2026-10-13T14:17:53.892+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":70}
+{"ts":"2026-10-13T14:17:58.782+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":48}
+{"ts":"2026-10-13T14:18:07.274+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":154}
+{"ts":"2026-10-13T14:18:12.030+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T14:18:15.653+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":108}
+{"ts":"2026-10-13T14:18:17.341+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":20}
+{"ts":"2026-10-13T14:18:31.720+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":134}
+{"ts":"2026-10-13T14:18:37.688+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":26}
+{"ts":"2026-10-13T14:18:38.203+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":50}
+{"ts":"2026-10-13T14:18:42.312+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:18:51.418+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:19:15.379+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":15}
+{"ts":"2026-10-13T14:19:22.180+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":51}
+{"ts":"2026-10-13T14:19:25.950+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":94}
+{"ts":"2026-10-13T14:19:33.122+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":30}
+{"ts":"2026-10-13T14:19:34.929+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":59}
+{"ts":"2026-10-13T14:19:57.185+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":82}
+{"ts":"2026-10-13T14:19:59.282+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":400,"ms":6}
+{"ts":"2026-10-13T14:20:00.063+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":5,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:20:05.154+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":97}
+{"ts":"2026-10-13T14:20:10.926+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":39}
+{"ts":"2026-10-13T14:20:10.930+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":36}
+{"ts":"2026-10-13T14:20:17.999+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":171}
+{"ts":"2026-10-13T14:20:43.109+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":101}
+{"ts":"2026-10-13T14:20:43.306+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":24}
+{"ts":"2026-10-13T14:20:44.312+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":9,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:20:50.232+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":60}
+{"ts":"2026-10-13T14:21:11.782+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":127}
+{"ts":"2026-10-13T14:21:12.227+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":7,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:21:22.827+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":151}
+{"ts":"2026-10-13T14:21:29.750+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":246}
+{"ts":"2026-10-13T14:21:40.697+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":115}
+{"ts":"2026-10-13T14:21:47.981+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":23}
+{"ts":"2026-10-13T14:21:52.734+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":400,"ms":1}
+{"ts":"2026-10-13T14:21:53.768+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":53}
+{"ts":"2026-10-13T14:21:55.517+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":400,"ms":4}
+{"ts":"2026-10-13T14:22:05.834+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":38}
+{"ts":"2026-10-13T14:22:16.706+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":80}
+{"ts":"2026-10-13T14:22:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":77}
+{"ts":"2026-10-13T14:22:24.887+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":246}
+{"ts":"2026-10-13T14:22:35.921+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":172}
+{"ts":"2026-10-13T14:22:40.577+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":48}
+{"ts":"2026-10-13T14:22:51.718+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":32}
+{"ts":"2026-10-13T14:22:59.047+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":69}
+{"ts":"2026-10-13T14:23:00.624+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":248}
+{"ts":"2026-10-13T14:23:01.214+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:23:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":82}
+{"ts":"2026-10-13T14:23:30.406+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":64}
+{"ts":"2026-10-13T14:23:35.914+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":32}
+{"ts":"2026-10-13T14:23:38.095+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":23}
+{"ts":"2026-10-13T14:23:40.684+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":19}
+{"ts":"2026-10-13T14:23:48.305+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":52}
+{"ts":"2026-10-13T14:23:52.621+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":20}
+{"ts":"2026-10-13T14:23:58.650+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}
+{"ts":"2026-10-13T14:24:00.843+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":8,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:24:10.081+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":74}
+{"ts":"2026-10-13T14:24:10.886+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":8,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:24:22.481+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":128}
+{"ts":"2026-10-13T14:24:27.716+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":147}
+{"ts":"2026-10-13T14:24:29.330+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":21}
+{"ts":"2026-10-13T14:24:33.769+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":76}
+{"ts":"2026-10-13T14:24:38.821+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":83}
+{"ts":"2026-10-13T14:24:48.997+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":28}
+{"ts":"2026-10-13T14:25:02.865+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":73}
+{"ts":"2026-10-13T14:25:24.879+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":18}
+{"ts":"2026-10-13T14:25:34.887+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":39}
+{"ts":"2026-10-13T14:25:42.192+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":38}
+{"ts":"2026-10-13T14:25:46.026+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":92}
+{"ts":"2026-10-13T14:25:54.298+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":524}
+{"ts":"2026-10-13T14:25:56.916+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":115}
+{"ts":"2026-10-13T14:26:12.763+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":75}
+{"ts":"2026-10-13T14:26:15.260+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":34}
+{"ts":"2026-10-13T14:26:16.275+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":395}
+{"ts":"2026-10-13T14:26:17.326+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":17}
+{"ts":"2026-10-13T14:26:17.879+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:26:36.427+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":73}
+{"ts":"2026-10-13T14:26:37.259+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":19}
+{"ts":"2026-10-13T14:26:40.245+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":41}
+{"ts":"2026-10-13T14:26:40.814+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:26:52.328+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:27:02.375+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":72}
+{"ts":"2026-10-13T14:27:21.108+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T14:27:24.525+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":115}
+{"ts":"2026-10-13T14:27:36.626+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":52}
+{"ts":"2026-10-13T14:27:42.145+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T14:27:52.150+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":18}
+{"ts":"2026-10-13T14:27:56.775+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":56}
+{"ts":"2026-10-13T14:28:06.241+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":59}
+{"ts":"2026-10-13T14:28:10.419+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":73}
+{"ts":"2026-10-13T14:28:12.685+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":14}
+{"ts":"2026-10-13T14:28:18.070+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":275}
+{"ts":"2026-10-13T14:28:30.987+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":36}
+{"ts":"2026-10-13T14:28:43.530+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":77}
+{"ts":"2026-10-13T14:28:47.992+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":114}
+{"ts":"2026-10-13T14:28:59.686+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":11,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:29:08.781+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":93}
+{"ts":"2026-10-13T14:29:16.378+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":5,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:29:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":77}
+{"ts":"2026-10-13T14:29:18.027+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":33}
+{"ts":"2026-10-13T14:29:19.776+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":108}
+{"ts":"2026-10-13T14:29:41.467+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":38}
+{"ts":"2026-10-13T14:29:44.287+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":30}
+{"ts":"2026-10-13T14:29:58.040+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":36}
+{"ts":"2026-10-13T14:29:58.323+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":20}
+{"ts":"2026-10-13T14:30:00.514+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":114}
+{"ts":"2026-10-13T14:30:14.945+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":105}
+{"ts":"2026-10-13T14:30:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":82}
+{"ts":"2026-10-13T14:30:28.339+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":30}
+{"ts":"2026-10-13T14:30:31.949+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":52}
+{"ts":"2026-10-13T14:30:38.302+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":96}
+{"ts":"2026-10-13T14:30:40.524+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":10,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:30:42.944+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":34}
+{"ts":"2026-10-13T14:30:49.380+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":102}
+{"ts":"2026-10-13T14:30:54.683+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":36}
+{"ts":"2026-10-13T14:31:12.553+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:31:17.936+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":38}
+{"ts":"2026-10-13T14:31:20.638+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":111}
+{"ts":"2026-10-13T14:31:24.357+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":133}
+{"ts":"2026-10-13T14:31:26.916+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":62}
+{"ts":"2026-10-13T14:31:27.704+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:31:28.825+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":10,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:31:29.925+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":9,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:31:29.970+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:31:31.456+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":62}
+{"ts":"2026-10-13T14:31:36.262+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":44}
+{"ts":"2026-10-13T14:31:55.202+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":32}
+{"ts":"2026-10-13T14:32:00.365+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":76}
+{"ts":"2026-10-13T14:32:05.216+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":10,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:32:17.145+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":144}
+{"ts":"2026-10-13T14:32:22.070+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":15}
+{"ts":"2026-10-13T14:32:29.818+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":51}
+{"ts":"2026-10-13T14:32:34.156+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":81}
+{"ts":"2026-10-13T14:32:38.991+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":48}
+{"ts":"2026-10-13T14:32:54.666+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":61}
+{"ts":"2026-10-13T14:33:08.824+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":32}
+{"ts":"2026-10-13T14:33:09.916+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":9}
+{"ts":"2026-10-13T14:33:19.253+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":64}
+{"ts":"2026-10-13T14:33:22.868+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":127}
+{"ts":"2026-10-13T14:33:26.677+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:33:31.953+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":52}
+{"ts":"2026-10-13T14:33:36.093+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":50}
+{"ts":"2026-10-13T14:33:53.290+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":11,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:33:57.825+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":235}
+{"ts":"2026-10-13T14:34:00.937+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":88}
+{"ts":"2026-10-13T14:34:03.013+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":39}
+{"ts":"2026-10-13T14:34:05.342+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:34:06.853+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":136}
+{"ts":"2026-10-13T14:34:08.218+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":200}
+{"ts":"2026-10-13T14:34:08.452+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":7,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:34:10.558+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":32}
+{"ts":"2026-10-13T14:34:15.641+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":61}
+{"ts":"2026-10-13T14:34:23.211+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T14:34:38.378+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":5,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:35:14.365+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":23}
+{"ts":"2026-10-13T14:35:25.863+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":9,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:35:28.805+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":149}
+{"ts":"2026-10-13T14:35:35.526+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":42}
+{"ts":"2026-10-13T14:35:36.820+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":16}
+{"ts":"2026-10-13T14:35:36.903+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":75}
+{"ts":"2026-10-13T14:35:42.560+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":63}
+{"ts":"2026-10-13T14:35:42.764+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":400,"ms":6}
+{"ts":"2026-10-13T14:36:10.828+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":70}
+{"ts":"2026-10-13T14:36:12.193+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":5,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:36:15.862+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":47}
+{"ts":"2026-10-13T14:36:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":78}
+{"ts":"2026-10-13T14:36:22.015+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":99}
+{"ts":"2026-10-13T14:36:32.983+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":65}
+{"ts":"2026-10-13T14:36:35.926+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T14:36:45.825+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":235}
+{"ts":"2026-10-13T14:36:54.221+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":108}
+{"ts":"2026-10-13T14:37:04.755+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":89}
+{"ts":"2026-10-13T14:37:06.132+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":242}
+{"ts":"2026-10-13T14:37:12.262+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":260}
+{"ts":"2026-10-13T14:37:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":79}
+{"ts":"2026-10-13T14:37:21.645+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":153}
+{"ts":"2026-10-13T14:37:25.773+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":241}
+{"ts":"2026-10-13T14:37:41.760+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":54}
+{"ts":"2026-10-13T14:37:46.496+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":95}
+{"ts":"2026-10-13T14:38:01.886+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":141}
+{"ts":"2026-10-13T14:38:12.236+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":159}
+{"ts":"2026-10-13T14:38:26.045+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":116}
+{"ts":"2026-10-13T14:38:28.685+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":106}
+{"ts":"2026-10-13T14:38:48.251+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":33}
+{"ts":"2026-10-13T14:38:49.441+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":104}
+{"ts":"2026-10-13T14:38:50.452+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":34}
+{"ts":"2026-10-13T14:39:04.069+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":102}
+{"ts":"2026-10-13T14:39:17.190+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":85}
+{"ts":"2026-10-13T14:39:18.199+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":15}
+{"ts":"2026-10-13T14:39:27.733+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":47}
+{"ts":"2026-10-13T14:39:42.691+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":75}
+{"ts":"2026-10-13T14:39:46.104+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":62}
+{"ts":"2026-10-13T14:39:51.547+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":40}
+{"ts":"2026-10-13T14:40:01.351+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":65}
+{"ts":"2026-10-13T14:40:06.034+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":34}
+{"ts":"2026-10-13T14:40:20.884+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":105}
+{"ts":"2026-10-13T14:40:22.877+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":58}
+{"ts":"2026-10-13T14:40:35.942+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":16}
+{"ts":"2026-10-13T14:40:46.474+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":34}
+{"ts":"2026-10-13T14:40:57.333+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":72}
+{"ts":"2026-10-13T14:41:00.287+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":56}
+{"ts":"2026-10-13T14:41:07.021+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":36}
+{"ts":"2026-10-13T14:41:09.839+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":93}
+{"ts":"2026-10-13T14:41:09.928+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":155}
+{"ts":"2026-10-13T14:41:15.865+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":35}
+{"ts":"2026-10-13T14:41:16.368+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":7,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:41:19.929+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":62}
+{"ts":"2026-10-13T14:41:49.952+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":53}
+{"ts":"2026-10-13T14:41:51.829+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:42:01.870+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":157}
+{"ts":"2026-10-13T14:42:15.341+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:42:20.448+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":17}
+{"ts":"2026-10-13T14:42:25.919+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":146}
+{"ts":"2026-10-13T14:42:26.659+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":41}
+{"ts":"2026-10-13T14:42:35.046+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":9,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:42:42.705+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":11}
+{"ts":"2026-10-13T14:42:48.412+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":85}
+{"ts":"2026-10-13T14:42:59.847+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":38}
+{"ts":"2026-10-13T14:43:06.915+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":45}
+{"ts":"2026-10-13T14:43:10.025+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":38}
+{"ts":"2026-10-13T14:43:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":78}
+{"ts":"2026-10-13T14:43:18.944+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":11,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:43:24.592+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":135}
+{"ts":"2026-10-13T14:43:29.050+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":15}
+{"ts":"2026-10-13T14:43:39.283+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":156}
+{"ts":"2026-10-13T14:43:45.185+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":90}
+{"ts":"2026-10-13T14:43:49.325+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":426}
+{"ts":"2026-10-13T14:44:08.320+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":117}
+{"ts":"2026-10-13T14:44:11.602+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":71}
+{"ts":"2026-10-13T14:44:12.098+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":46}
+{"ts":"2026-10-13T14:44:14.591+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":13}
+{"ts":"2026-10-13T14:44:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":80}
+{"ts":"2026-10-13T14:44:18.116+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":11,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:44:28.645+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":21}
+{"ts":"2026-10-13T14:44:37.770+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":83}
+{"ts":"2026-10-13T14:44:40.592+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":86}
+{"ts":"2026-10-13T14:44:43.140+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:44:45.655+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:45:02.850+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":105}
+{"ts":"2026-10-13T14:45:08.973+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":87}
+{"ts":"2026-10-13T14:45:19.435+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":125}
+{"ts":"2026-10-13T14:45:29.186+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":91}
+{"ts":"2026-10-13T14:45:36.339+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":26}
+{"ts":"2026-10-13T14:45:51.278+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":87}
+{"ts":"2026-10-13T14:46:01.646+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":113}
+{"ts":"2026-10-13T14:46:07.692+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":127}
+{"ts":"2026-10-13T14:46:09.809+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":135}
+{"ts":"2026-10-13T14:46:31.415+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":4,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:46:35.715+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":46}
+{"ts":"2026-10-13T14:46:37.041+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":42}
+{"ts":"2026-10-13T14:46:39.974+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":10,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:46:50.839+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":37}
+{"ts":"2026-10-13T14:46:51.085+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":32}
+{"ts":"2026-10-13T14:47:19.080+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":230}
+{"ts":"2026-10-13T14:47:40.193+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":128}
+{"ts":"2026-10-13T14:47:48.417+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":36}
+{"ts":"2026-10-13T14:47:55.764+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":172}
+{"ts":"2026-10-13T14:47:56.113+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":101}
+{"ts":"2026-10-13T14:47:56.407+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T14:47:56.562+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":400,"ms":5}
+{"ts":"2026-10-13T14:48:00.156+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":64}
+{"ts":"2026-10-13T14:48:29.326+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":17}
+{"ts":"2026-10-13T14:48:38.997+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":242}
+{"ts":"2026-10-13T14:48:47.531+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":2,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:48:47.656+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":24}
+{"ts":"2026-10-13T14:48:48.968+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":112}
+{"ts":"2026-10-13T14:48:53.415+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":125}
+{"ts":"2026-10-13T14:48:57.281+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":32}
+{"ts":"2026-10-13T14:49:05.730+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":160}
+{"ts":"2026-10-13T14:49:19.559+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":58}
+{"ts":"2026-10-13T14:49:30.650+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":40}
+{"ts":"2026-10-13T14:49:32.321+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:49:43.220+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":120}
+{"ts":"2026-10-13T14:49:51.619+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":92}
+{"ts":"2026-10-13T14:49:53.260+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:49:54.207+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T14:50:09.080+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":69}
+{"ts":"2026-10-13T14:50:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":78}
+{"ts":"2026-10-13T14:50:19.235+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}
+{"ts":"2026-10-13T14:50:21.111+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":83}
+{"ts":"2026-10-13T14:50:21.540+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":52}
+{"ts":"2026-10-13T14:50:27.194+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":62}
+{"ts":"2026-10-13T14:50:33.610+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":400,"ms":6}
+{"ts":"2026-10-13T14:50:38.704+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":12,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:50:47.298+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":26}
+{"ts":"2026-10-13T14:51:02.637+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":99}
+{"ts":"2026-10-13T14:51:14.609+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:51:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":79}
+{"ts":"2026-10-13T14:51:23.800+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T14:51:30.794+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":45}
+{"ts":"2026-10-13T14:51:42.385+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:51:43.439+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":47}
+{"ts":"2026-10-13T14:51:56.443+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":8}
+{"ts":"2026-10-13T14:51:56.643+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":20}
+{"ts":"2026-10-13T14:51:59.089+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":10}
+{"ts":"2026-10-13T14:52:03.318+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":78}
+{"ts":"2026-10-13T14:52:14.164+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":11,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:52:17.338+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":16}
+{"ts":"2026-10-13T14:52:22.435+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":89}
+{"ts":"2026-10-13T14:52:24.049+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:52:33.897+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":50}
+{"ts":"2026-10-13T14:52:57.242+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}
+{"ts":"2026-10-13T14:52:57.401+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":65}
+{"ts":"2026-10-13T14:53:00.067+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":35}
+{"ts":"2026-10-13T14:53:22.659+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":17}
+{"ts":"2026-10-13T14:53:22.668+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":136}
+{"ts":"2026-10-13T14:53:39.788+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":125}
+{"ts":"2026-10-13T14:53:43.024+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":66}
+{"ts":"2026-10-13T14:53:54.754+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":28}
+{"ts":"2026-10-13T14:53:57.038+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":9,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:54:05.534+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":206}
+{"ts":"2026-10-13T14:54:19.991+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":78}
+{"ts":"2026-10-13T14:54:24.646+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":48}
+{"ts":"2026-10-13T14:54:35.868+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":109}
+{"ts":"2026-10-13T14:54:36.570+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":50}
+{"ts":"2026-10-13T14:54:45.216+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":77}
+{"ts":"2026-10-13T14:54:59.493+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":64}
+{"ts":"2026-10-13T14:54:59.890+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:55:18.452+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":93}
+{"ts":"2026-10-13T14:55:32.097+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":13,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:55:35.193+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}
+{"ts":"2026-10-13T14:55:40.873+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":173}
+{"ts":"2026-10-13T14:55:45.071+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":40}
+{"ts":"2026-10-13T14:55:46.649+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":107}
+{"ts":"2026-10-13T14:55:51.111+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":176}
+{"ts":"2026-10-13T14:55:57.184+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":46}
+{"ts":"2026-10-13T14:56:03.429+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":24}
+{"ts":"2026-10-13T14:56:18.954+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":30}
+{"ts":"2026-10-13T14:56:33.288+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":82}
+{"ts":"2026-10-13T14:56:42.179+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":42}
+{"ts":"2026-10-13T14:56:44.777+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":11,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:56:49.602+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":14}
+{"ts":"2026-10-13T14:56:55.030+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":72}
+{"ts":"2026-10-13T14:57:02.057+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":14}
+{"ts":"2026-10-13T14:57:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":76}
+{"ts":"2026-10-13T14:57:20.791+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":45}
+{"ts":"2026-10-13T14:57:21.285+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":127}
+{"ts":"2026-10-13T14:57:23.152+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":195}
+{"ts":"2026-10-13T14:57:36.718+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":71}
+{"ts":"2026-10-13T14:57:57.602+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":33}
+{"ts":"2026-10-13T14:58:14.807+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":166}
+{"ts":"2026-10-13T14:58:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T14:58:28.004+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":134}
+{"ts":"2026-10-13T14:58:28.426+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":234}
+{"ts":"2026-10-13T14:58:32.504+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T14:58:40.376+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":33}
+{"ts":"2026-10-13T14:58:50.657+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:58:56.662+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":17}
+{"ts":"2026-10-13T14:59:10.176+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:59:11.352+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:59:20.409+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":274}
+{"ts":"2026-10-13T14:59:41.200+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":12}
+{"ts":"2026-10-13T14:59:42.915+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":6}
+{"ts":"2026-10-13T14:59:45.739+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":60}
+{"ts":"2026-10-13T14:59:48.248+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":3,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T14:59:55.897+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":29}
+{"ts":"2026-10-13T14:59:58.649+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":88}
+{"ts":"2026-10-13T15:00:09.701+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":7}
+{"ts":"2026-10-13T15:00:10.191+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":29}
+{"ts":"2026-10-13T15:00:23.325+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":111}
+{"ts":"2026-10-13T15:00:27.840+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":40}
+{"ts":"2026-10-13T15:00:37.115+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":51}
+{"ts":"2026-10-13T15:00:59.304+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":142}
+{"ts":"2026-10-13T15:01:01.330+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":37}
+{"ts":"2026-10-13T15:01:19.416+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":66}
+{"ts":"2026-10-13T15:01:21.828+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":12}
+{"ts":"2026-10-13T15:01:24.381+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":22}
+{"ts":"2026-10-13T15:01:38.121+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":49}
+{"ts":"2026-10-13T15:01:47.994+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":22}
+{"ts":"2026-10-13T15:01:56.466+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":126}
+{"ts":"2026-10-13T15:02:04.368+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":120}
+{"ts":"2026-10-13T15:02:19.006+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":48}
+{"ts":"2026-10-13T15:02:31.483+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":77}
+{"ts":"2026-10-13T15:02:41.935+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":40}
+{"ts":"2026-10-13T15:02:48.632+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":114}
+{"ts":"2026-10-13T15:02:49.006+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":113}
+{"ts":"2026-10-13T15:03:22.309+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T15:03:25.754+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":47}
+{"ts":"2026-10-13T15:03:27.519+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":51}
+{"ts":"2026-10-13T15:03:30.542+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":97}
+{"ts":"2026-10-13T15:03:31.522+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":381}
+{"ts":"2026-10-13T15:03:50.706+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":93}
+{"ts":"2026-10-13T15:04:03.222+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":53}
+{"ts":"2026-10-13T15:04:06.631+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":53}
+{"ts":"2026-10-13T15:04:10.990+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":80}
+{"ts":"2026-10-13T15:04:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":79}
+{"ts":"2026-10-13T15:04:49.658+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":19}
+{"ts":"2026-10-13T15:04:55.288+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":17}
+{"ts":"2026-10-13T15:04:56.358+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":57}
+{"ts":"2026-10-13T15:05:02.194+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":18}
+{"ts":"2026-10-13T15:05:08.488+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":70}
+{"ts":"2026-10-13T15:05:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":80}
+{"ts":"2026-10-13T15:05:33.559+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":22}
+{"ts":"2026-10-13T15:05:37.014+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":268}
+{"ts":"2026-10-13T15:05:47.879+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":96}
+{"ts":"2026-10-13T15:06:06.552+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":17}
+{"ts":"2026-10-13T15:06:12.369+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":94}
+{"ts":"2026-10-13T15:06:33.813+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":49}
+{"ts":"2026-10-13T15:06:40.503+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T15:06:53.538+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":25}
+{"ts":"2026-10-13T15:07:29.151+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":7}
+{"ts":"2026-10-13T15:07:34.780+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}
+{"ts":"2026-10-13T15:07:37.099+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":85}
+{"ts":"2026-10-13T15:07:48.384+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":43}
+{"ts":"2026-10-13T15:07:50.047+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":29}
+{"ts":"2026-10-13T15:07:55.723+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":47}
+{"ts":"2026-10-13T15:08:07.974+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":10}
+{"ts":"2026-10-13T15:08:09.808+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T15:08:16.326+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":7,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T15:08:18.794+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":102}
+{"ts":"2026-10-13T15:08:39.394+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":105}
+{"ts":"2026-10-13T15:08:51.063+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":40}
+{"ts":"2026-10-13T15:08:56.639+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":45}
+{"ts":"2026-10-13T15:09:07.069+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":47}
+{"ts":"2026-10-13T15:09:09.689+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T15:09:12.534+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":31}
+{"ts":"2026-10-13T15:09:14.171+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":39}
+{"ts":"2026-10-13T15:09:20.196+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":51}
+{"ts":"2026-10-13T15:10:02.641+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":135}
+{"ts":"2026-10-13T15:10:03.624+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":43}
+{"ts":"2026-10-13T15:10:41.281+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":37}
+{"ts":"2026-10-13T15:10:50.826+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":89}
+{"ts":"2026-10-13T15:10:57.338+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":29}
+{"ts":"2026-10-13T15:11:10.989+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":41}
+{"ts":"2026-10-13T15:11:15.775+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":73}
+{"ts":"2026-10-13T15:11:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":77}
+{"ts":"2026-10-13T15:11:50.830+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":208}
+{"ts":"2026-10-13T15:11:58.500+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":211}
+{"ts":"2026-10-13T15:11:59.253+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":94}
+{"ts":"2026-10-13T15:12:02.096+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":190}
+{"ts":"2026-10-13T15:12:06.197+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":36}
+{"ts":"2026-10-13T15:12:10.959+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":31}
+{"ts":"2026-10-13T15:12:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":80}
+{"ts":"2026-10-13T15:12:24.896+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":103}
+{"ts":"2026-10-13T15:12:26.541+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":72}
+{"ts":"2026-10-13T15:12:39.422+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":26}
+{"ts":"2026-10-13T15:13:08.890+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":63}
+{"ts":"2026-10-13T15:13:17.918+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":28}
+{"ts":"2026-10-13T15:13:19.271+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":62}
+{"ts":"2026-10-13T15:13:46.122+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":15}
+{"ts":"2026-10-13T15:14:03.025+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":108}
+{"ts":"2026-10-13T15:14:19.897+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":56}
+{"ts":"2026-10-13T15:14:32.961+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":5}
+{"ts":"2026-10-13T15:14:37.663+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":152}
+{"ts":"2026-10-13T15:14:44.577+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":62}
+{"ts":"2026-10-13T15:15:01.526+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":92}
+{"ts":"2026-10-13T15:15:15.660+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":42}
+{"ts":"2026-10-13T15:15:27.148+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":88}
+{"ts":"2026-10-13T15:15:28.924+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":216}
+{"ts":"2026-10-13T15:15:30.438+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":57}
+{"ts":"2026-10-13T15:16:00.333+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":36}
+{"ts":"2026-10-13T15:16:24.658+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":20}
+{"ts":"2026-10-13T15:16:29.883+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":53}
+{"ts":"2026-10-13T15:16:48.751+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":54}
+{"ts":"2026-10-13T15:16:52.680+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":337}
+{"ts":"2026-10-13T15:17:27.892+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T15:17:28.758+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":79}
+{"ts":"2026-10-13T15:17:37.921+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":51}
+{"ts":"2026-10-13T15:17:39.232+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":29}
+{"ts":"2026-10-13T15:17:48.836+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":276}
+{"ts":"2026-10-13T15:17:54.020+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":16}
+{"ts":"2026-10-13T15:18:10.666+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":23}
+{"ts":"2026-10-13T15:18:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":79}
+{"ts":"2026-10-13T15:18:27.439+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":34}
+{"ts":"2026-10-13T15:18:29.144+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":28}
+{"ts":"2026-10-13T15:18:30.174+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":48}
+{"ts":"2026-10-13T15:19:12.714+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":93}
+{"ts":"2026-10-13T15:19:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T15:19:23.679+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":98}
+{"ts":"2026-10-13T15:19:39.744+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":5}
+{"ts":"2026-10-13T15:19:48.502+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":9}
+{"ts":"2026-10-13T15:19:51.766+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":40}
+{"ts":"2026-10-13T15:20:07.128+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":64}
+{"ts":"2026-10-13T15:20:13.769+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":283}
+{"ts":"2026-10-13T15:20:22.717+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":14}
+{"ts":"2026-10-13T15:20:23.595+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":82}
+{"ts":"2026-10-13T15:21:04.586+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":263}
+{"ts":"2026-10-13T15:21:05.185+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":27}
+{"ts":"2026-10-13T15:21:24.235+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":43}
+{"ts":"2026-10-13T15:21:33.606+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":19}
+{"ts":"2026-10-13T15:21:35.443+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":55}
+{"ts":"2026-10-13T15:22:06.573+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":68}
+{"ts":"2026-10-13T15:22:08.817+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":39}
+{"ts":"2026-10-13T15:22:43.904+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":102}
+{"ts":"2026-10-13T15:22:47.578+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":251}
+{"ts":"2026-10-13T15:23:00.932+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":262}
+{"ts":"2026-10-13T15:23:06.124+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":182}
+{"ts":"2026-10-13T15:23:18.149+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":45}
+{"ts":"2026-10-13T15:23:22.884+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":172}
+{"ts":"2026-10-13T15:24:08.795+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":20}
+{"ts":"2026-10-13T15:24:14.758+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":34}
+{"ts":"2026-10-13T15:24:52.497+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":69}
+{"ts":"2026-10-13T15:24:55.698+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":51}
+{"ts":"2026-10-13T15:25:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":78}
+{"ts":"2026-10-13T15:25:18.091+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":31}
+{"ts":"2026-10-13T15:25:41.242+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":86}
+{"ts":"2026-10-13T15:25:43.894+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":76}
+{"ts":"2026-10-13T15:26:06.214+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":338}
+{"ts":"2026-10-13T15:26:13.138+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":58}
+{"ts":"2026-10-13T15:26:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":81}
+{"ts":"2026-10-13T15:26:37.885+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":14}
+{"ts":"2026-10-13T15:26:52.871+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":33}
+{"ts":"2026-10-13T15:27:04.382+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":83}
+{"ts":"2026-10-13T15:27:41.876+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":19}
+{"ts":"2026-10-13T15:27:48.659+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":49}
+{"ts":"2026-10-13T15:27:51.255+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":125}
+{"ts":"2026-10-13T15:28:03.947+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":73}
+{"ts":"2026-10-13T15:28:15.748+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":6,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T15:28:58.235+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":31}
+{"ts":"2026-10-13T15:28:59.148+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":403,"ms":11}
+{"ts":"2026-10-13T15:29:03.287+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":62}
+{"ts":"2026-10-13T15:29:25.067+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":103}
+{"ts":"2026-10-13T15:29:26.616+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":11}
+{"ts":"2026-10-13T15:29:39.632+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":309}
+{"ts":"2026-10-13T15:29:46.468+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":88}
+{"ts":"2026-10-13T15:30:25.019+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":80}
+{"ts":"2026-10-13T15:30:33.690+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":25}
+{"ts":"2026-10-13T15:30:38.893+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":29}
+{"ts":"2026-10-13T15:31:00.555+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":63}
+{"ts":"2026-10-13T15:31:05.742+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T15:31:22.414+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":23}
+{"ts":"2026-10-13T15:31:56.673+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":37}
+{"ts":"2026-10-13T15:32:17.044+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":13}
+{"ts":"2026-10-13T15:32:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":78}
+{"ts":"2026-10-13T15:32:37.803+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":47}
+{"ts":"2026-10-13T15:32:49.998+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":57}
+{"ts":"2026-10-13T15:33:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":80}
+{"ts":"2026-10-13T15:33:54.678+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":47}
+{"ts":"2026-10-13T15:33:57.832+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":40}
+{"ts":"2026-10-13T15:33:59.894+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":39}
+{"ts":"2026-10-13T15:34:05.977+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":14}
+{"ts":"2026-10-13T15:34:11.369+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":19}
+{"ts":"2026-10-13T15:34:35.828+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":48}
+{"ts":"2026-10-13T15:35:08.918+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}
+{"ts":"2026-10-13T15:35:13.074+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":54}
+{"ts":"2026-10-13T15:35:23.442+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":5}
+{"ts":"2026-10-13T15:36:04.451+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":21}
+{"ts":"2026-10-13T15:36:26.666+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":90}
+{"ts":"2026-10-13T15:36:52.961+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":89}
+{"ts":"2026-10-13T15:37:18.673+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":44}
+{"ts":"2026-10-13T15:37:49.560+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":35}
+{"ts":"2026-10-13T15:37:55.678+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":70}
+{"ts":"2026-10-13T15:38:22.456+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":44}
+{"ts":"2026-10-13T15:38:50.101+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":88}
+{"ts":"2026-10-13T15:38:56.536+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":46}
+{"ts":"2026-10-13T15:39:01.495+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":11}
+{"ts":"2026-10-13T15:39:16.028+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":41}
+{"ts":"2026-10-13T15:39:16.333+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":78}
+{"ts":"2026-10-13T15:39:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":78}
+{"ts":"2026-10-13T15:40:02.844+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":104}
+{"ts":"2026-10-13T15:40:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":80}
+{"ts":"2026-10-13T15:40:39.500+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":28}
+{"ts":"2026-10-13T15:40:49.058+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":102}
+{"ts":"2026-10-13T15:41:18.414+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":15}
+{"ts":"2026-10-13T15:41:36.309+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":82}
+{"ts":"2026-10-13T15:42:18.271+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":14}
+{"ts":"2026-10-13T15:42:26.207+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":52}
+{"ts":"2026-10-13T15:42:28.326+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":130}
+{"ts":"2026-10-13T15:43:07.299+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":99}
+{"ts":"2026-10-13T15:43:25.770+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":19}
+{"ts":"2026-10-13T15:43:33.249+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":90}
+{"ts":"2026-10-13T15:44:25.661+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":57}
+{"ts":"2026-10-13T15:44:27.192+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":16}
+{"ts":"2026-10-13T15:44:53.678+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":34}
+{"ts":"2026-10-13T15:45:02.574+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":50}
+{"ts":"2026-10-13T15:45:44.978+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":91}
+{"ts":"2026-10-13T15:46:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":75}
+{"ts":"2026-10-13T15:46:48.357+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":13}
+{"ts":"2026-10-13T15:46:53.656+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":18}
+{"ts":"2026-10-13T15:46:54.497+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":82}
+{"ts":"2026-10-13T15:47:00.553+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":18}
+{"ts":"2026-10-13T15:47:13.049+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":26}
+{"ts":"2026-10-13T15:47:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":82}
+{"ts":"2026-10-13T15:47:42.545+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":101}
+{"ts":"2026-10-13T15:48:30.074+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":37}
+{"ts":"2026-10-13T15:48:47.403+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":154}
+{"ts":"2026-10-13T15:49:23.503+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":131}
+{"ts":"2026-10-13T15:49:39.973+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":61}
+{"ts":"2026-10-13T15:49:53.250+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":34}
+{"ts":"2026-10-13T15:50:18.622+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":81}
+{"ts":"2026-10-13T15:50:23.258+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":49}
+{"ts":"2026-10-13T15:50:50.957+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":102}
+{"ts":"2026-10-13T15:51:11.378+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":83}
+{"ts":"2026-10-13T15:51:16.155+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":57}
+{"ts":"2026-10-13T15:51:53.392+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":45}
+{"ts":"2026-10-13T15:52:09.034+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":15}
+{"ts":"2026-10-13T15:52:58.779+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":47}
+{"ts":"2026-10-13T15:53:05.892+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":404,"ms":57}
+{"ts":"2026-10-13T15:53:11.040+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":109}
+{"ts":"2026-10-13T15:53:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":78}
+{"ts":"2026-10-13T15:53:50.039+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":34}
+{"ts":"2026-10-13T15:54:07.162+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":141}
+{"ts":"2026-10-13T15:54:14.153+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":232}
+{"ts":"2026-10-13T15:54:17.204+03:00","level":"warn","msg":"heap usage high","heap_used_pct":82}
+{"ts":"2026-10-13T15:54:27.059+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":103}
+{"ts":"2026-10-13T15:55:14.441+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":140}
+{"ts":"2026-10-13T15:55:24.688+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":43}
+{"ts":"2026-10-13T15:56:19.316+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":48}
+{"ts":"2026-10-13T15:56:44.015+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":57}
+{"ts":"2026-10-13T15:56:55.261+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":18}
+{"ts":"2026-10-13T15:57:31.717+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":33}
+{"ts":"2026-10-13T15:57:43.804+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":9,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T15:57:45.873+03:00","level":"info","msg":"request","method":"GET","path":"/admin/parcels","status":200,"ms":82}
+{"ts":"2026-10-13T15:58:07.642+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":57}
+{"ts":"2026-10-13T15:58:39.405+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":21}
+{"ts":"2026-10-13T15:58:55.619+03:00","level":"info","msg":"request","method":"POST","path":"/parcels","status":201,"ms":59}
+{"ts":"2026-10-13T15:59:18.557+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":208}
+{"ts":"2026-10-13T15:59:30.659+03:00","level":"error","msg":"request failed","method":"POST","path":"/parcels","status":500,"ms":14,"error":"Cannot read properties of undefined (reading 'trim')"}
+{"ts":"2026-10-13T15:59:52.049+03:00","level":"info","msg":"request","method":"POST","path":"/pickup","status":200,"ms":59}

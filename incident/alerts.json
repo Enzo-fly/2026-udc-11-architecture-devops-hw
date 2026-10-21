@@ -1,0 +1,31 @@
+{
+  "source": "monitoring export",
+  "timezone": "Europe/Kyiv",
+  "date": "2026-10-14",
+  "alerts": [
+    {
+      "name": "SmsProvider429RateHigh",
+      "severity": "warning",
+      "condition": "sms_429_per_min > 20 протягом 5 хв",
+      "fired_at": "2026-10-14T13:37:00+03:00",
+      "resolved_at": "2026-10-14T15:03:00+03:00",
+      "channel": "#poshtomat-oncall"
+    },
+    {
+      "name": "ApiLatencyP95High",
+      "severity": "page",
+      "condition": "p95_ms > 2000 протягом 3 хв",
+      "fired_at": "2026-10-14T14:06:00+03:00",
+      "resolved_at": "2026-10-14T14:48:00+03:00",
+      "channel": "#poshtomat-oncall + дзвінок черговому"
+    },
+    {
+      "name": "Api5xxRateHigh",
+      "severity": "page",
+      "condition": "error_rate > 0.05 протягом 3 хв",
+      "fired_at": "2026-10-14T14:07:00+03:00",
+      "resolved_at": "2026-10-14T14:48:00+03:00",
+      "channel": "#poshtomat-oncall + дзвінок черговому"
+    }
+  ]
+}

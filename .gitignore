@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+out/
+*.log
+# incident/ is evidence for Task C — every file in it stays tracked, *.log included
+!incident/**
+.DS_Store
+# Windows Git Bash safety: never commit an accidental NUL device file
+nul

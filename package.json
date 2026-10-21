@@ -1,0 +1,13 @@
+{
+  "name": "udc-ws11-architecture-devops-hw",
+  "private": true,
+  "description": "UDC Workshop 11 homework: architecture and DevOps tasks around the community parcel-locker service",
+  "type": "module",
+  "scripts": {
+    "check:deploy": "node tools/check-deploy.mjs",
+    "test:tools": "node --test tools/test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

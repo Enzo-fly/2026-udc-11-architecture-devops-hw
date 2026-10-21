@@ -1,0 +1,16 @@
+{
+  "name": "poshtomat",
+  "version": "1.7.3",
+  "private": true,
+  "description": "Community parcel lockers: HTTP API, SMS worker and a nightly expiry job",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js",
+    "worker": "node src/worker.js",
+    "expire": "node bin/expire-parcels.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
