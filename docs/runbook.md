@@ -40,7 +40,8 @@
    - `{"error":"service busy, try again"} 503 ~2s` — **пул БД вичерпано.** Запит
      2 с чекав з'єднання (`app/src/server.js:65`). Ідіть на крок 3.
    - `{"error":"internal error"} 500` — помилка в коді або БД. Див. «Діагностику», рядок 3.
-   - Немає відповіді — API лежить: `docker compose ps`.
+   - Немає відповіді — API лежить. Подивіться стан контейнерів на VM:
+     `ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -p poshtomat --env-file .env ps -a"`.
 3. **Чи був деплой або рестарт за останню годину?** Це найімовірніша причина, перевіряйте її першою:
    ```bash
    ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -p poshtomat --env-file .env logs --since 2h api worker | grep -E '\"(service started|worker started)\"'"

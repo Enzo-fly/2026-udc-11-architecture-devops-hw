@@ -253,7 +253,9 @@ jobs:
           cp -p compose.yaml compose.yaml.failed
           cp -p .env .env.failed
           if ! $had_prev; then
-            echo "::error::попереднього релізу немає (перший деплой) — відкочувати нема на що"
+            echo "::error::попереднього релізу немає (перший деплой) — відкочувати нема на що; зупиняю новий"
+            # Не down: зупинені контейнери лишаються для `logs`, але порт закрито і worker не шле SMS.
+            dc --env-file .env stop api worker || true
             exit 1
           fi
           echo "Повертаю попередній реліз: $(grep '^POSHTOMAT_IMAGE=' .env.prev | cut -d= -f2-)"
