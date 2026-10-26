@@ -4,11 +4,14 @@
 # а сюди передає за digest. Секрети й посилання на образ — у файлі .env поруч
 # (права 600, його пише деплой), у git їх немає:
 #
-#   POSHTOMAT_IMAGE=ghcr.io/<owner>/<repo>@sha256:...
+#   POSHTOMAT_IMAGE=ghcr.io/<owner>/<repo>:sha-<коміт>@sha256:...
 #   DATABASE_URL='postgres://poshtomat:<пароль>@192.0.2.10:5432/poshtomat'
 #   SMS_TOKEN='<токен SMS-провайдера>'
 #
-# Запуск:        docker compose -p poshtomat --env-file .env up -d --wait
+# Запуск:        docker compose -p poshtomat --env-file .env up -d --remove-orphans
+#                docker compose -p poshtomat --env-file .env up -d --wait --wait-timeout 120 api
+#                (--wait лише для api: у worker перевірку вимкнено, і Compose v2.26.1 на
+#                 `up --wait` для всіх сервісів дає exit 1 — docs/task-e-bonus.md)
 # Нічна задача:  docker compose -p poshtomat --env-file .env run --rm expire   (з cron)
 
 x-env: &env

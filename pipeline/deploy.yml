@@ -61,7 +61,9 @@ jobs:
       contents: read
       packages: write
     outputs:
-      image: ${{ steps.ref.outputs.repo }}@${{ steps.build.outputs.digest }}
+      # тег — щоб у .env, логах і `docker ps` було видно коміт; digest — гарантія, що саме
+      # цей образ (тег можна перезаписати, digest — ні; Docker тягне за digest)
+      image: ${{ steps.ref.outputs.repo }}:sha-${{ github.sha }}@${{ steps.build.outputs.digest }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -110,6 +112,23 @@ jobs:
       DEPLOY_DIR: /opt/poshtomat
       IMAGE: ${{ needs.build.outputs.image }}
     steps:
+      # concurrency не гарантує порядок: старіший запуск, погоджений пізніше, розгорнув би
+      # свій образ поверх новішого. Тому перший запуск деплоїть лише голову main.
+      # Повторний запуск (Re-run, run_attempt > 1) — це свідомий відкат на цей коміт, його
+      # не блокуємо (docs/runbook.md, «Що робити», рядок 1).
+      - name: Коміт досі голова main
+        if: github.run_attempt == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          head=$(curl -fsSL -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github.sha" \
+            "${GITHUB_API_URL}/repos/${GITHUB_REPOSITORY}/commits/main")
+          if [ "$head" != "$GITHUB_SHA" ]; then
+            echo "::error::застарілий запуск: ${GITHUB_SHA} уже не голова main (${head}); не деплоїмо"
+            exit 1
+          fi
+
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
@@ -189,9 +208,22 @@ jobs:
           # Старт усіх сервісів, потім очікування healthy лише для api: у worker перевірку
           # вимкнено, і Compose v2.26.1 на `up --wait` для всіх сервісів дає exit 1
           # («has no healthcheck configured»), хоча все працює (docs/task-e-bonus.md).
+          # Healthcheck у worker немає, тож перевіряємо інакше: за 20 с після старту він
+          # працює (running) і жодного разу не перезапустився.
+          worker_stable() {
+            local id before after
+            id=$(dc --env-file .env ps -a -q worker)
+            [ -n "$id" ] || return 1
+            before=$(docker inspect -f '{{.RestartCount}}' "$id")
+            sleep 20
+            after=$(docker inspect -f '{{.State.Status}} {{.RestartCount}}' "$id")
+            [ "$after" = "running $before" ] || { echo "worker нестабільний: $after"; return 1; }
+          }
+
           up_and_wait() {
             dc --env-file .env up -d --remove-orphans &&
-              dc --env-file .env up -d --wait --wait-timeout 120 api
+              dc --env-file .env up -d --wait --wait-timeout 120 api &&
+              worker_stable
           }
 
           if up_and_wait; then

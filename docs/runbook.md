@@ -3,8 +3,10 @@
 > Для чергового, який інциденту 14.10 не бачив. Кожен крок — команда для копіювання і
 > підказка, що у виводі означає «так» чи «ні». Розбір того інциденту — [`docs/rca.md`](rca.md).
 >
-> **Де виконувати.** Команди з `ssh` запускаються на VM `poshtomat-prod-1` з теки, де лежать
-> `deploy/` і `app/`. Тут вона позначена `/opt/poshtomat`, як у `docs/ops/backup-runbook.md`.
+> **Де виконувати.** Команди з `ssh` запускаються на VM `poshtomat-prod-1` у теці `/opt/poshtomat`.
+> Туди деплой (`pipeline/deploy.yml`) кладе `compose.yaml` і `.env` (образ за digest і секрети),
+> а після кожного деплою лишає попередні — `compose.yaml.prev` і `.env.prev`. Проєкт compose
+> — `poshtomat`, тому всі команди мають вигляд `docker compose -p poshtomat --env-file .env …`.
 > Шлях до теки й ім'я VM звірте один раз заздалегідь, а не під час інциденту.
 > Команди з позначкою «з репо» працюють на ноутбуці з кореня репозиторію в Git Bash.
 
@@ -38,7 +40,7 @@
    - Немає відповіді — API лежить: `docker compose ps`.
 3. **Чи був деплой або рестарт за останню годину?** Це найімовірніша причина, перевіряйте її першою:
    ```bash
-   ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -f deploy/compose.yaml logs --since 2h api worker | grep -E '\"(service started|worker started)\"'"
+   ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -p poshtomat --env-file .env logs --since 2h api worker | grep -E '\"(service started|worker started)\"'"
    ```
    - Є рядок `service started` з новою `version` менш як годину тому → **одразу відкат**
      (див. «Що робити», рядок 1). Причину шукайте потім. 14.10 деплой за 4 хв до пейджа
@@ -51,10 +53,10 @@
 
 | Питання | Команда | Як читати результат |
 |---|---|---|
-| 1. Яка версія працює і коли стартувала? | `ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -f deploy/compose.yaml logs --since 24h api \| grep '\"service started\"' \| tail -3"` | Остання `version` відрізняється від учорашньої і старт був недавно → підозра на реліз, «Що робити», рядок 1 |
+| 1. Яка версія працює і коли стартувала? | `ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -p poshtomat --env-file .env logs --since 24h api \| grep '\"service started\"' \| tail -3"` | Остання `version` відрізняється від учорашньої і старт був недавно → підозра на реліз, «Що робити», рядок 1 |
 | 2. Чи впирається пул БД у стелю? | Дашборд: `db_pool_in_use` і `db_pool_waiting` за останню годину | `waiting > 0` і `in_use` — **рівна лінія** на одному числі → пул замалий (стеля = його розмір). Наступне питання — яка стеля. `waiting = 0` → пул ні до чого, дивіться рядок 3 |
-| 3. Які саме помилки віддає API? | `ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -f deploy/compose.yaml logs --since 15m api \| grep '\"request failed\"' \| grep -o '\"error\":\"[^\"]*\"' \| sort \| uniq -c \| sort -rn"` | `db pool wait timeout after 2000ms` — пул (рядки 2, 4). `Cannot read properties of undefined (reading 'trim')` — **фоновий баг**, ~125 на день, не причина пейджа. Інше (наприклад, `ECONNREFUSED`, `too many clients`) — БД, рядок 6 |
-| 4. Який розмір пулу насправді отримав API? | `ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -f deploy/compose.yaml exec -T api node -e 'import(\"./src/config.js\").then(m=>{const c=m.loadConfig();console.log(\"dbPoolMax\",c.dbPoolMax,\"waitMs\",c.dbPoolWaitMs)})'"` | Має бути `dbPoolMax 20`. Якщо `4` — **API не бачить `DB_POOL_MAX`** і взяв значення для локальної розробки (`app/src/config.js:9`). Секрети ця команда не друкує |
+| 3. Які саме помилки віддає API? | `ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -p poshtomat --env-file .env logs --since 15m api \| grep '\"request failed\"' \| grep -o '\"error\":\"[^\"]*\"' \| sort \| uniq -c \| sort -rn"` | `db pool wait timeout after 2000ms` — пул (рядки 2, 4). `Cannot read properties of undefined (reading 'trim')` — **фоновий баг**, ~125 на день, не причина пейджа. Інше (наприклад, `ECONNREFUSED`, `too many clients`) — БД, рядок 6 |
+| 4. Який розмір пулу насправді отримав API? | `ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -p poshtomat --env-file .env exec -T api node -e 'import(\"./src/config.js\").then(m=>{const c=m.loadConfig();console.log(\"dbPoolMax\",c.dbPoolMax,\"waitMs\",c.dbPoolWaitMs)})'"` | Має бути `dbPoolMax 20`. Якщо `4` — **API не бачить `DB_POOL_MAX`** і взяв значення для локальної розробки (`app/src/config.js:9`). Секрети ця команда не друкує |
 | 5. Чи всі змінні з compose читає застосунок? (з репо, на версії, що в проді) | `for k in $(grep -oE '^\s+[A-Z_]+:' deploy/compose.yaml \| tr -d ' :' \| sort -u); do grep -q "env\.$k\b" app/src/config.js && echo "ok $k" \|\| echo "НЕ ЧИТАЄТЬСЯ $k"; done` | Усі `ok`, крім `TZ` (її читає Node, це нормально). Будь-яке інше `НЕ ЧИТАЄТЬСЯ` — неправильна назва змінної. Застосунок мовчки бере значення за замовчуванням. 14.10 тут було б `НЕ ЧИТАЄТЬСЯ DB_POOL_SIZE` |
 | 6. Чи жива PostgreSQL і скільки в неї з'єднань? | `ssh poshtomat-prod-1 "sudo -u postgres psql -d poshtomat -Atc \"select state, count(*) from pg_stat_activity where datname='poshtomat' group by 1\""` | Відповідь за секунду, з'єднань не більше ~60 (3 процеси × `DB_POOL_MAX` 20) → БД у порядку, причина в API. Тайм-аут або помилка → БД, ескалюйте |
 | 7. Чи не вікно бекапу? | `date +%H:%M` (Київ) | **02:00–02:30** база заблокована на запис (`docs/ops/backup-runbook.md:10-11`): реєстрація і видача падають за розкладом. Це не цей runbook, див. backup-runbook |
@@ -84,10 +86,10 @@
 
 | Ситуація | Дія | Команда | Ризик / що перевірити після |
 |---|---|---|---|
-| 1. Деплой менш як 60 хв тому (будь-яка причина) | **Відкат на попередній реліз — і образу, і `deploy/compose.yaml`** | `ssh poshtomat-prod-1 "cd /opt/poshtomat && git log --oneline -3 && git checkout <попередній-тег> && docker compose -f deploy/compose.yaml up -d --build"` | **Відкочуйте compose разом з кодом.** Якщо відкотити лише образ, неправильна змінна лишиться. Після відкату перевірте крок 2 з «Перших 5 хвилин» і `service started` зі старою версією. Відкат займає ~2 хв і без міграцій БД безпечний |
-| 2. Рядок 4 дає `dbPoolMax 4`, а відкат неможливий | Повернути правильну назву змінної в `deploy/compose.yaml` (`DB_POOL_MAX: "20"`) для **api і worker** і перестворити контейнери | `ssh poshtomat-prod-1 "cd /opt/poshtomat && grep -n DB_POOL deploy/compose.yaml"`; виправити; `docker compose -f deploy/compose.yaml up -d` | Це правка на проді повз `main`: одразу після інциденту зробіть PR з тією самою зміною, інакше наступний деплой поверне помилку |
+| 1. Деплой менш як 60 хв тому (будь-яка причина) | **Відкат на попередній реліз — і образу, і `compose.yaml` разом.** Основний спосіб — GitHub: Actions → workflow `deploy` → попередній **успішний** запуск → **Re-run jobs → deploy**. Він знову розгорне той самий digest і той самий `compose.yaml`. Якщо GitHub недоступний — на VM із `.prev`-файлів останнього деплою (команда праворуч) | `ssh poshtomat-prod-1 'cd /opt/poshtomat && cp compose.yaml compose.yaml.bad && cp .env .env.bad && cp compose.yaml.prev compose.yaml && cp .env.prev .env && grep "^POSHTOMAT_IMAGE=" .env && docker compose -p poshtomat --env-file .env up -d --remove-orphans && docker compose -p poshtomat --env-file .env up -d --wait --wait-timeout 120 api'` | **Відкочуйте compose разом з образом.** Якщо відкотити лише образ, неправильна змінна лишиться. `--build` не допоможе: образ на VM не збирається, його задає `POSHTOMAT_IMAGE` у `.env`. Попередній образ лишається на VM, бо старі образи ніхто не видаляє. Після відкату перевірте крок 2 з «Перших 5 хвилин» і `service started` зі старою версією. Відкат займає ~2 хв і без міграцій БД безпечний |
+| 2. Рядок 4 дає `dbPoolMax 4`, а відкат неможливий | Повернути правильну назву змінної в `/opt/poshtomat/compose.yaml`. Змінні спільні для api, worker і expire (блок `x-env`), тож одна правка виправляє всі. Потім перестворити контейнери | `ssh poshtomat-prod-1 'cd /opt/poshtomat && cp compose.yaml compose.yaml.bak && sed -i "s/^\( *\)DB_POOL_SIZE:/\1DB_POOL_MAX:/" compose.yaml && grep -n DB_POOL compose.yaml && docker compose -p poshtomat --env-file .env up -d --remove-orphans && docker compose -p poshtomat --env-file .env up -d --wait --wait-timeout 120 api'` — замість `DB_POOL_SIZE` підставте неправильну назву з діагностики, рядок 5 | Уся команда виконується на VM, в одних лапках `ssh`. `grep` має показати `DB_POOL_MAX: "20"`. Це правка на проді повз `main`: одразу після інциденту зробіть PR з тією самою зміною, інакше наступний деплой поверне помилку |
 | 3. Пул упирається в 20, БД здорова, rps як учора | Ескалюйте розробнику: швидше за все, новий повільний запит або з'єднання тримається довше, ніж треба | — | Не збільшуйте пул наосліп: 3 процеси × N з'єднань мають уміститися в `max_connections` PostgreSQL |
-| 4. Трафік різко вищий за звичайний | Повідомте координаторку, щоб з'ясувати джерело. Тимчасово `DB_POOL_MAX: "30"` лише для api | правка `deploy/compose.yaml`, `docker compose -f deploy/compose.yaml up -d api` | Перевірте `show max_connections` у psql до зміни |
+| 4. Трафік різко вищий за звичайний | Повідомте координаторку, щоб з'ясувати джерело. Тимчасово `DB_POOL_MAX: "30"` лише для api | `ssh -t poshtomat-prod-1 'cd /opt/poshtomat && cp compose.yaml compose.yaml.bak && nano compose.yaml && docker compose -p poshtomat --env-file .env up -d --wait --wait-timeout 120 api'` — у `nano` додайте `DB_POOL_MAX: "30"` в `environment:` сервісу `api` після `PORT` | Перевірте `show max_connections` у psql до зміни |
 | 5. БД не відповідає (рядок 6) | Ескалюйте розробнику, відповідальному за VM | `ssh poshtomat-prod-1 "sudo systemctl status postgresql"` | Сервіс без БД не відновиться рестартом API |
 | 6. Помилки тільки `reading 'trim'` | Нічого: це фоновий баг на `/parcels`, пейдж його не спричинив. Шукайте далі | — | — |
 
@@ -114,7 +116,7 @@
 - Діагностика, рядок 4: `dbPoolMax 20`.
 - Лог API за 5 хв без `db pool wait timeout`:
   ```bash
-  ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -f deploy/compose.yaml logs --since 5m api | grep -c 'db pool wait timeout'"
+  ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -p poshtomat --env-file .env logs --since 5m api | grep -c 'db pool wait timeout'"
   ```
   Очікується `0`.
 - Напишіть у #poshtomat-oncall: що бачили, що зробили, о котрій відновилося.

@@ -107,7 +107,7 @@ on the VM)»). Жодного обмеження, яке є лише в мате
 Чого не помітив жоден прогін — врахувати у `docs/adr/0001-notifications.md`:
 
 - **Прод-конфіг перевищує ліміт провайдера.** `SMS_RATE_PER_SEC: "20"`
-  (`deploy/compose.yaml:20`, `:34`) при ліміті 10/с (`materials/vendors/sms-provider.md:16`).
+  (`deploy/compose.yaml:25`, спільний `x-env`) при ліміті 10/с (`materials/vendors/sms-provider.md:16`).
   В `app/` значення 20 немає (дефолт — 5, `app/src/config.js:13`). Обидва прогони не бачили
   `deploy/`. → #7.
 - **Відновлення з бекапу відкочує таймери.** Після `pg_restore --clean`
