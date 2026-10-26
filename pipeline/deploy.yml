@@ -186,7 +186,15 @@ jobs:
           mv compose.yaml.new compose.yaml
           mv .env.new .env
 
-          if dc --env-file .env up -d --wait --wait-timeout 120 --remove-orphans; then
+          # Старт усіх сервісів, потім очікування healthy лише для api: у worker перевірку
+          # вимкнено, і Compose v2.26.1 на `up --wait` для всіх сервісів дає exit 1
+          # («has no healthcheck configured»), хоча все працює (docs/task-e-bonus.md).
+          up_and_wait() {
+            dc --env-file .env up -d --remove-orphans &&
+              dc --env-file .env up -d --wait --wait-timeout 120 api
+          }
+
+          if up_and_wait; then
             echo "Розгорнуто: $(grep '^POSHTOMAT_IMAGE=' .env | cut -d= -f2-)"
             exit 0
           fi
@@ -197,7 +205,7 @@ jobs:
             echo "Повертаю попередній реліз"
             mv compose.yaml.prev compose.yaml
             mv .env.prev .env
-            dc --env-file .env up -d --wait --wait-timeout 120 --remove-orphans
+            up_and_wait
           fi
           exit 1
           EOF
