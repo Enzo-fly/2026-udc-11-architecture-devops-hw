@@ -108,7 +108,20 @@ ssh poshtomat-prod-1 'cd /opt/poshtomat && id=$(docker compose -p poshtomat --en
 - `running 0 (було 0)` — **так**: за 60 с worker не перезапускався, тобто перший і другий лічильник однакові.
 - Лічильник зріс (наприклад, `running 5 (було 0)`) або статус `restarting`/`exited` — **ні**,
   worker падає: `docker compose -p poshtomat --env-file .env logs --tail 50 worker` і ескалюйте.
-  Так само цю перевірку робить скрипт деплою (`up_and_wait` у `pipeline/deploy.yml`).
+
+Живий worker ще не означає, що він працює: помилку раунду (наприклад, тайм-аут пулу БД) він
+лише пише в лог і продовжує цикл. Тому одразу після команди вище:
+
+```bash
+ssh poshtomat-prod-1 'cd /opt/poshtomat && docker compose -p poshtomat --env-file .env logs --since 2m worker | grep -c "\"msg\":\"notify round failed\""'
+```
+
+- `0` — **так**: за 2 хв (~12 раундів) жоден раунд не впав.
+- Більше `0` — **ні**: worker живий, але посилки не обробляє. Подивіться поле `error` у цих
+  рядках (`… | grep "notify round failed" | tail -3`) і ескалюйте. `sms send failed` сюди не
+  входить: поодинокі 429 і TLS-тайм-аути бувають щодня.
+
+Обидві перевірки за вікно 60 с робить і скрипт деплою (`up_and_wait` у `pipeline/deploy.yml`).
 
 ## Коли ескалювати і кого кликати
 

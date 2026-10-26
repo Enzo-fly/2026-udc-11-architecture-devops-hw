@@ -214,7 +214,9 @@ jobs:
           # /health не ходить у БД (app/src/server.js:37), тож healthy ще не означає, що API
           # працює. Той самий пробний запит, що й у runbook («Перші 5 хвилин», крок 2):
           # неіснуючий токен API перевіряє в БД через пул і відповідає 403. Неправильний
-          # DATABASE_URL чи недоступна БД дадуть 500/503 або тайм-аут 2 с.
+          # DATABASE_URL чи недоступна БД дадуть 500/503 або тайм-аут 2 с. У репо сховище
+          # в пам'яті, а на проді за тим самим інтерфейсом PostgreSQL (app/src/db.js:1-2),
+          # тож 403 на VM означає, що пошук сесії в БД пройшов.
           db_probe() {
             dc --env-file .env exec -T api node -e "fetch('http://127.0.0.1:' + (process.env.PORT || 8080) + '/admin/parcels', { headers: { authorization: 'Bearer probe' }, signal: AbortSignal.timeout(2000) }).then(r => { console.log('проба БД:', r.status); process.exit(r.status === 403 ? 0 : 1); }, e => { console.log('проба БД:', e.message); process.exit(1); })"
           }
@@ -226,13 +228,18 @@ jobs:
           # беремо одразу після старту, і через WORKER_WINDOW с worker має бути running з тим
           # самим лічильником. Docker скидає паузу між перезапусками після 10 с роботи, тож
           # цикл «працює 25 с — падає» за 60 с дасть щонайменше один перезапуск.
+          # Живий процес ще не означає, що worker працює: помилку раунду (наприклад, тайм-аут
+          # пулу БД) worker лише пише в лог і йде на наступний раунд (app/src/worker.js:60-64).
+          # Тому за те саме вікно (~6 раундів по 10 с) у лозі не має бути `notify round failed`.
+          # `sms send failed` не рахуємо: поодинокі 429 і TLS-тайм-аути бувають щодня.
           WORKER_WINDOW=60
           up_and_wait() {
-            local id before t0 left after
+            local id before since t0 left after failed
             dc --env-file .env up -d --remove-orphans || return 1
             id=$(dc --env-file .env ps -a -q worker)
             [ -n "$id" ] || { echo "worker не запущено"; return 1; }
             before=$(docker inspect -f '{{.RestartCount}}' "$id")
+            since=$(date +%s)
             t0=$SECONDS
             dc --env-file .env up -d --wait --wait-timeout 120 api || return 1
             db_probe || return 1
@@ -240,6 +247,8 @@ jobs:
             if [ "$left" -gt 0 ]; then sleep "$left"; fi
             after=$(docker inspect -f '{{.State.Status}} {{.RestartCount}}' "$id")
             [ "$after" = "running $before" ] || { echo "worker нестабільний: $after (було $before)"; return 1; }
+            failed=$(docker logs --since "$since" "$id" 2>&1 | grep '"msg":"notify round failed"' || true)
+            [ -z "$failed" ] || { echo "worker не обробляє раунди: $(printf '%s\n' "$failed" | wc -l) × notify round failed"; printf '%s\n' "$failed" | tail -3; return 1; }
           }
 
           if up_and_wait; then
