@@ -662,10 +662,20 @@ const APP_CONFIG = "app/src/config.js";
 // Read by Node itself (or by libc for TZ), never by config.js — legitimate in compose.
 const RUNTIME_ENV = new Set(["TZ", "NODE_ENV", "NODE_OPTIONS", "NODE_EXTRA_CA_CERTS"]);
 
-/** Names the app reads: env.NAME or env["NAME"] (process.env.NAME included) in code. */
+/**
+ * Names the app reads in code: env.NAME, env["NAME"] and `const { NAME, OTHER: x = 1 } = env`
+ * (process.env included).
+ */
 function configEnvNames(source) {
+  const code = codeOnly(source);
   const names = new Set();
-  for (const m of codeOnly(source).matchAll(/\benv\s*(?:\.\s*([A-Za-z_]\w*)|\[\s*["'`]([A-Za-z_]\w*)["'`]\s*\])/g)) names.add(m[1] ?? m[2]);
+  for (const m of code.matchAll(/\benv\s*(?:\.\s*([A-Za-z_]\w*)|\[\s*["'`]([A-Za-z_]\w*)["'`]\s*\])/g)) names.add(m[1] ?? m[2]);
+  for (const m of code.matchAll(/\{([^{}]*)\}\s*=\s*(?:process\s*\.\s*)?env\b(?!\s*\.)/g)) {
+    for (const part of m[1].split(",")) {
+      const key = /^\s*([A-Za-z_]\w*)\s*(?:[:=]|$)/.exec(part)?.[1];
+      if (key) names.add(key);
+    }
+  }
   return names;
 }
 

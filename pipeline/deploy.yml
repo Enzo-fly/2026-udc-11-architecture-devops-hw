@@ -15,8 +15,10 @@
 #       DATABASE_URL         postgres://poshtomat:<пароль>@192.0.2.10:5432/poshtomat
 #       SMS_TOKEN            токен SMS-провайдера
 #
-# Відкат: «Re-run job» для job deploy з попереднього успішного запуску — він розгорне
-# той самий digest. Якщо новий реліз не стає healthy, скрипт сам повертає попередній.
+# Відкат: якщо новий реліз не проходить перевірок, скрипт сам повертає попередній. Інакше —
+# на VM із .prev-файлів (docs/runbook.md, «Що робити», рядок 1) або `git revert` у main:
+# це новий коміт-голова, і він іде звичайним шляхом. «Re-run» старого запуску відкатом не є —
+# його зупинить перевірка «Коміт досі голова main».
 
 name: deploy
 
@@ -118,11 +120,10 @@ jobs:
       IMAGE: ${{ needs.build.outputs.image }}
     steps:
       # concurrency не гарантує порядок: старіший запуск, погоджений пізніше, розгорнув би
-      # свій образ поверх новішого. Тому перший запуск деплоїть лише голову main.
-      # Повторний запуск (Re-run, run_attempt > 1) — це свідомий відкат на цей коміт, його
-      # не блокуємо (docs/runbook.md, «Що робити», рядок 1).
+      # свій образ поверх новішого. Тому деплоїмо лише голову main — і в повторних запусках
+      # (Re-run) теж: «Re-run failed jobs» на застарілому запуску інакше тихо повернув би
+      # прод на старий коміт.
       - name: Коміт досі голова main
-        if: github.run_attempt == '1'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -210,25 +211,35 @@ jobs:
           mv compose.yaml.new compose.yaml
           mv .env.new .env
 
+          # /health не ходить у БД (app/src/server.js:37), тож healthy ще не означає, що API
+          # працює. Той самий пробний запит, що й у runbook («Перші 5 хвилин», крок 2):
+          # неіснуючий токен API перевіряє в БД через пул і відповідає 403. Неправильний
+          # DATABASE_URL чи недоступна БД дадуть 500/503 або тайм-аут 2 с.
+          db_probe() {
+            dc --env-file .env exec -T api node -e "fetch('http://127.0.0.1:' + (process.env.PORT || 8080) + '/admin/parcels', { headers: { authorization: 'Bearer probe' }, signal: AbortSignal.timeout(2000) }).then(r => { console.log('проба БД:', r.status); process.exit(r.status === 403 ? 0 : 1); }, e => { console.log('проба БД:', e.message); process.exit(1); })"
+          }
+
           # Старт усіх сервісів, потім очікування healthy лише для api: у worker перевірку
           # вимкнено, і Compose v2.26.1 на `up --wait` для всіх сервісів дає exit 1
           # («has no healthcheck configured»), хоча все працює (docs/task-e-bonus.md).
-          # Healthcheck у worker немає, тож перевіряємо інакше: за 20 с після старту він
-          # працює (running) і жодного разу не перезапустився.
-          worker_stable() {
-            local id before after
-            id=$(dc --env-file .env ps -a -q worker)
-            [ -n "$id" ] || return 1
-            before=$(docker inspect -f '{{.RestartCount}}' "$id")
-            sleep 20
-            after=$(docker inspect -f '{{.State.Status}} {{.RestartCount}}' "$id")
-            [ "$after" = "running $before" ] || { echo "worker нестабільний: $after"; return 1; }
-          }
-
+          # Healthcheck у worker немає, тож перевіряємо інакше: лічильник перезапусків
+          # беремо одразу після старту, і через WORKER_WINDOW с worker має бути running з тим
+          # самим лічильником. Docker скидає паузу між перезапусками після 10 с роботи, тож
+          # цикл «працює 25 с — падає» за 60 с дасть щонайменше один перезапуск.
+          WORKER_WINDOW=60
           up_and_wait() {
-            dc --env-file .env up -d --remove-orphans &&
-              dc --env-file .env up -d --wait --wait-timeout 120 api &&
-              worker_stable
+            local id before t0 left after
+            dc --env-file .env up -d --remove-orphans || return 1
+            id=$(dc --env-file .env ps -a -q worker)
+            [ -n "$id" ] || { echo "worker не запущено"; return 1; }
+            before=$(docker inspect -f '{{.RestartCount}}' "$id")
+            t0=$SECONDS
+            dc --env-file .env up -d --wait --wait-timeout 120 api || return 1
+            db_probe || return 1
+            left=$((WORKER_WINDOW - (SECONDS - t0)))
+            if [ "$left" -gt 0 ]; then sleep "$left"; fi
+            after=$(docker inspect -f '{{.State.Status}} {{.RestartCount}}' "$id")
+            [ "$after" = "running $before" ] || { echo "worker нестабільний: $after (було $before)"; return 1; }
           }
 
           if up_and_wait; then
@@ -236,13 +247,23 @@ jobs:
             exit 0
           fi
 
-          echo "::error::новий реліз не став healthy"
+          echo "::error::новий реліз не пройшов перевірок"
           dc --env-file .env logs --tail 100 api worker || true
-          if $had_prev; then
-            echo "Повертаю попередній реліз"
-            mv compose.yaml.prev compose.yaml
-            mv .env.prev .env
-            up_and_wait
+          # Файли невдалого релізу лишаються для розбору (.failed), а не зникають.
+          cp -p compose.yaml compose.yaml.failed
+          cp -p .env .env.failed
+          if ! $had_prev; then
+            echo "::error::попереднього релізу немає (перший деплой) — відкочувати нема на що"
+            exit 1
+          fi
+          echo "Повертаю попередній реліз: $(grep '^POSHTOMAT_IMAGE=' .env.prev | cut -d= -f2-)"
+          mv compose.yaml.prev compose.yaml
+          mv .env.prev .env
+          if up_and_wait; then
+            echo "::error::відкат вдався, працює попередній реліз; новий — у compose.yaml.failed і .env.failed"
+          else
+            echo "::error::ВІДКАТ НЕ ВДАВСЯ: не працює ні новий, ні попередній реліз — ескалюйте (docs/runbook.md)"
+            dc --env-file .env ps -a || true
           fi
           exit 1
           EOF

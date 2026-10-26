@@ -22,7 +22,7 @@ x-env: &env
   DB_POOL_WAIT_MS: "2000"
   SMS_BASE_URL: "https://sms.example.net/api/v2"
   SMS_TOKEN: "${SMS_TOKEN:?SMS_TOKEN не задано в .env}"
-  SMS_RATE_PER_SEC: "20"
+  SMS_RATE_PER_SEC: "8"  # ліміт провайдера 10/с, понад це 429; 8 — запас 20 % (ADR 0001, Р3). Було 20
   COURIER_BASE_URL: "https://courier.example.com/api/v1"
 
 x-app: &app

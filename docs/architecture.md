@@ -13,7 +13,8 @@
 > Після деплою нового compose запис у crontab на VM треба змінити.
 >
 > Оцінки прогонів AI від цього не змінились: ті прогони бачили `deploy/` у початковому
-> стані, а `DB_POOL_MAX` і `SMS_RATE_PER_SEC` там і тепер ті самі — 20 і 20.
+> стані, а `DB_POOL_MAX` там і тепер той самий (20). `SMS_RATE_PER_SEC` змінено з 20 на 8 уже після
+> прогонів (рішення ADR, Р3); у підписі K9 обидва числа однаково не збігаються з «5».
 
 ## Рівень 1 — System Context
 
@@ -132,7 +133,7 @@ C4Container
 | K6 | Моніторинг → API: `GET /health` | `app/src/server.js:37` | є | є |
 | K7 | API → PostgreSQL: вставка посилки з новим кодом; пошук за кодом, `picked_up`, подія; список; сесії | `app/src/parcels.js:43-55`, `:61`, `:64-67`, `:74`; `app/src/server.js:18`; PostgreSQL — `app/src/db.js:1-2`, `deploy/compose.yaml:1`, `:8`, `:20` | є | є (пул «до 4» — у проді `DB_POOL_MAX: "20"`, `deploy/compose.yaml:21`) |
 | K8 | Воркер → PostgreSQL: `listUnnotified(50)`, потім `notifiedAt` | `app/src/worker.js:9`, `:24`, `:33` | є (**«кожні 30 с»** — у коді 10 с, `app/src/worker.js:8`) | є |
-| K9 | Воркер → SMS-провайдер: `POST /messages`, темп `SMS_RATE_PER_SEC`, на 429 повтор | `app/src/worker.js:28`, `:44-49`; `app/src/sms.js:21-25`, `:31-41`; `deploy/compose.yaml:25` | є | є (**«не більше 5 SMS/с»** — це лише значення за замовчуванням, `app/src/config.js:13`; у проді 20, `deploy/compose.yaml:25`) |
+| K9 | Воркер → SMS-провайдер: `POST /messages`, темп `SMS_RATE_PER_SEC`, на 429 повтор | `app/src/worker.js:28`, `:44-49`; `app/src/sms.js:21-25`, `:31-41`; `deploy/compose.yaml:25` | є | є (**«не більше 5 SMS/с»** — це лише значення за замовчуванням, `app/src/config.js:13`; у проді 20, з 26.10 — 8, `deploy/compose.yaml:25`) |
 | K10 | SMS-провайдер → Мешканець: SMS з кодом | `app/src/worker.js:12`, `:28` | є | є |
 | K11 | cron на VM → Нічна задача: о 03:15, `docker compose run --rm expire` (до Task D — `run --rm worker npm run expire`) | `deploy/compose.yaml:15`, `:81-87` (сервіс `expire`, `profiles: [jobs]`, `command: node bin/expire-parcels.js`); `app/bin/expire-parcels.js:2`; час 03:15 — `docs/ops/backup-runbook.md:18-19` | **пропустив** — cron є лише в тексті припущень | **пропустив** — cron є лише в підписі контейнера й у припущеннях |
 | K12 | Нічна задача → PostgreSQL: читає всі посилки, фільтрує `waiting` і понад 72 год, ставить `returned` | `app/src/parcels.js:18`, `:78-87`; `app/bin/expire-parcels.js:12`, `:14` | є (підпис **неповний**: лише «оновлює статус», без читання; хибним не рахую — сказане правильне) | є |

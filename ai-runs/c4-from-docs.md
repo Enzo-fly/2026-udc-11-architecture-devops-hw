@@ -1,4 +1,4 @@
-- Інструмент і модель: Claude Code (VS Code), claude-opus-5-5
+- Інструмент і модель: Claude Code (VS Code), claude-opus-5-5, effort Medium
 - Дата: 2026-10-25
 - Що бачила сесія: тимчасова тека `../ws11-b-docs` — лише `app/README.md` і `app/docs/ARCHITECTURE.md` (без коду, `.git`, `AGENTS.md`, `CLAUDE.md`); нова сесія, пам'ять і глобальні інструкції відсутні
 - Промпт (дослівно):

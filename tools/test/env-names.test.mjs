@@ -6,7 +6,7 @@ import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "nod
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { loadContext, RULES } from "../check-deploy.mjs";
+import { parseYaml, PATHS, RULES } from "../check-deploy.mjs";
 
 const REPO = fileURLToPath(new URL("../..", import.meta.url));
 // the real config.js: the rule must work against what the app actually reads
@@ -103,7 +103,20 @@ test("P1: env.NAME in a comment or a string is not a read", () => {
   assert.doesNotMatch(result.message, /DATABASE_URL|SMS_BASE_URL|COURIER_BASE_URL/);
 });
 
-test("P1: the repo's own deploy/compose.yaml passes", () => {
-  const result = P1.check(loadContext(REPO));
+test("P1: destructuring from env counts as reading", () => {
+  const config = "export function loadConfig(env = process.env) {\n  const { PORT, DB_POOL_MAX: max = 4, ...rest } = env;\n  return { PORT, max, rest };\n}\n";
+  const ok = check({ api: { image: "a:1", environment: { PORT: "8080", DB_POOL_MAX: "20" } } }, config);
+  assert.equal(ok.status, "PASS", ok.message);
+  const renamed = check({ api: { image: "a:1", environment: { PORT: "8080", DB_POOL_SIZE: "20" } } }, config);
+  assert.equal(renamed.status, "FAIL");
+  assert.match(renamed.message, /api: DB_POOL_SIZE не читається \(схожа: DB_POOL_MAX\)/);
+});
+
+// Only compose is parsed (P1 needs nothing else), through the real YAML parser — npx needs
+// the network or a warm npm cache, so without them the test skips instead of failing on npx.
+test("P1: the repo's own deploy/compose.yaml passes", (t) => {
+  const parsed = parseYaml(readFileSync(join(REPO, PATHS.compose), "utf8"));
+  if (parsed.toolError) return t.skip(`npx yaml недоступний: ${parsed.toolError}`);
+  const result = P1.check({ root: REPO, compose: { path: PATHS.compose, exists: true, ...parsed } });
   assert.equal(result.status, "PASS", result.message);
 });

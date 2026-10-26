@@ -7,7 +7,8 @@
 > Туди деплой (`pipeline/deploy.yml`) кладе `compose.yaml` і `.env` (образ за digest і секрети),
 > а після кожного **успішного** деплою (крім першого) лишає попередні — `compose.yaml.prev`
 > і `.env.prev`. Після першого деплою їх немає. Після невдалого їх теж немає: автоматичний
-> відкат переносить їх назад (`pipeline/deploy.yml`, `mv … .prev`). Проєкт compose
+> відкат переносить їх назад (`pipeline/deploy.yml`, `mv … .prev`), а файли невдалого релізу
+> лишає як `compose.yaml.failed` і `.env.failed`. Проєкт compose
 > — `poshtomat`, тому всі команди мають вигляд `docker compose -p poshtomat --env-file .env …`.
 > Шлях до теки й ім'я VM звірте один раз заздалегідь, а не під час інциденту.
 > Команди з позначкою «з репо» працюють на ноутбуці з кореня репозиторію в Git Bash.
@@ -88,7 +89,7 @@
 
 | Ситуація | Дія | Команда | Ризик / що перевірити після |
 |---|---|---|---|
-| 1. Деплой менш як 60 хв тому (будь-яка причина) | **Відкат на попередній реліз — і образу, і `compose.yaml` разом.** Основний спосіб — GitHub: Actions → workflow `deploy` → попередній **успішний** запуск → **Re-run jobs → deploy**. Він знову розгорне той самий digest і той самий `compose.yaml`. Якщо GitHub недоступний — на VM із `.prev`-файлів останнього успішного деплою (команда праворуч), потім «Перевірка worker» під таблицею | `ssh poshtomat-prod-1 'cd /opt/poshtomat && { test -f compose.yaml.prev && test -f .env.prev \|\| { echo "немає .prev: перший або невдалий деплой — відкат лише через Re-run у GitHub"; exit 1; }; } && cp compose.yaml compose.yaml.bad && cp .env .env.bad && cp compose.yaml.prev compose.yaml && cp .env.prev .env && grep "^POSHTOMAT_IMAGE=" .env && docker compose -p poshtomat --env-file .env up -d --remove-orphans && docker compose -p poshtomat --env-file .env up -d --wait --wait-timeout 120 api'` | **Відкочуйте compose разом з образом.** Якщо відкотити лише образ, неправильна змінна лишиться. `--build` не допоможе: образ на VM не збирається, його задає `POSHTOMAT_IMAGE` у `.env`. Попередній образ лишається на VM, бо старі образи ніхто не видаляє. Після відкату перевірте крок 2 з «Перших 5 хвилин» і `service started` зі старою версією. Відкат займає ~2 хв і без міграцій БД безпечний |
+| 1. Деплой менш як 60 хв тому (будь-яка причина) | **Відкат на попередній реліз — і образу, і `compose.yaml` разом.** Основний спосіб — на VM із `.prev`-файлів останнього успішного деплою (команда праворуч), потім «Перевірка worker» під таблицею. Він працює, лише якщо є обидва файли. Їх немає після першого деплою і після невдалого — тоді автовідкат уже повернув попередній реліз, і відкочувати вручну нема на що. Другий спосіб, якщо `.prev` немає: `git revert` поганого коміту в `main` і звичайний деплой з погодженням (~10 хв). **Re-run** старого запуску в GitHub Actions відкатом не є — його зупинить перевірка «Коміт досі голова main» | `ssh poshtomat-prod-1 'cd /opt/poshtomat && { test -f compose.yaml.prev && test -f .env.prev \|\| { echo "немає .prev: перший або невдалий деплой — відкат лише через git revert у main"; exit 1; }; } && cp compose.yaml compose.yaml.bad && cp .env .env.bad && cp compose.yaml.prev compose.yaml && cp .env.prev .env && grep "^POSHTOMAT_IMAGE=" .env && docker compose -p poshtomat --env-file .env up -d --remove-orphans && docker compose -p poshtomat --env-file .env up -d --wait --wait-timeout 120 api'` | **Відкочуйте compose разом з образом.** Якщо відкотити лише образ, неправильна змінна лишиться. `--build` не допоможе: образ на VM не збирається, його задає `POSHTOMAT_IMAGE` у `.env`. Попередній образ лишається на VM, бо старі образи ніхто не видаляє. Після відкату перевірте крок 2 з «Перших 5 хвилин» і `service started` зі старою версією. Відкат займає ~2 хв і без міграцій БД безпечний |
 | 2. Рядок 4 дає `dbPoolMax 4`, а відкат неможливий | Повернути правильну назву змінної в `/opt/poshtomat/compose.yaml`. Змінні спільні для api, worker і expire (блок `x-env`), тож одна правка виправляє всі. Потім перестворити контейнери і виконати «Перевірку worker» під таблицею | `ssh poshtomat-prod-1 'cd /opt/poshtomat && cp compose.yaml compose.yaml.bak && sed -i "s/^\( *\)DB_POOL_SIZE:/\1DB_POOL_MAX:/" compose.yaml && grep -n DB_POOL compose.yaml && docker compose -p poshtomat --env-file .env up -d --remove-orphans && docker compose -p poshtomat --env-file .env up -d --wait --wait-timeout 120 api'` — замість `DB_POOL_SIZE` підставте неправильну назву з діагностики, рядок 5 | Уся команда виконується на VM, в одних лапках `ssh`. `grep` має показати `DB_POOL_MAX: "20"`. Це правка на проді повз `main`: одразу після інциденту зробіть PR з тією самою зміною, інакше наступний деплой поверне помилку |
 | 3. Пул упирається в 20, БД здорова, rps як учора | Ескалюйте розробнику: швидше за все, новий повільний запит або з'єднання тримається довше, ніж треба | — | Не збільшуйте пул наосліп: 3 процеси × N з'єднань мають уміститися в `max_connections` PostgreSQL |
 | 4. Трафік різко вищий за звичайний | Повідомте координаторку, щоб з'ясувати джерело. Тимчасово `DB_POOL_MAX: "30"` лише для api | `ssh -t poshtomat-prod-1 'cd /opt/poshtomat && cp compose.yaml compose.yaml.bak && nano compose.yaml && docker compose -p poshtomat --env-file .env up -d --wait --wait-timeout 120 api'` — у `nano` додайте `DB_POOL_MAX: "30"` в `environment:` сервісу `api` після `PORT` | Перевірте `show max_connections` у psql до зміни |
@@ -97,16 +98,16 @@
 
 **Перевірка worker** — після рядків 1, 2 і 4. Команди вище чекають лише на api, бо в worker
 немає healthcheck. Worker, що падає в циклі, вони пропустять, а пробний запит до API однаково
-дасть `403`:
+дасть `403`. Вікно — 60 с, як у скрипті деплою: коротше пропустить worker, що падає раз на пів хвилини:
 
 ```bash
-ssh poshtomat-prod-1 'cd /opt/poshtomat && id=$(docker compose -p poshtomat --env-file .env ps -a -q worker) && b=$(docker inspect -f "{{.RestartCount}}" "$id") && sleep 20 && docker inspect -f "{{.State.Status}} {{.RestartCount}} (було $b)" "$id"'
+ssh poshtomat-prod-1 'cd /opt/poshtomat && id=$(docker compose -p poshtomat --env-file .env ps -a -q worker) && b=$(docker inspect -f "{{.RestartCount}}" "$id") && sleep 60 && docker inspect -f "{{.State.Status}} {{.RestartCount}} (було $b)" "$id"'
 ```
 
-- `running 0 (було 0)` — **так**: за 20 с worker не перезапускався, тобто перший і другий лічильник однакові.
+- `running 0 (було 0)` — **так**: за 60 с worker не перезапускався, тобто перший і другий лічильник однакові.
 - Лічильник зріс (наприклад, `running 5 (було 0)`) або статус `restarting`/`exited` — **ні**,
   worker падає: `docker compose -p poshtomat --env-file .env logs --tail 50 worker` і ескалюйте.
-  Так само цю перевірку робить скрипт деплою (`worker_stable` у `pipeline/deploy.yml`).
+  Так само цю перевірку робить скрипт деплою (`up_and_wait` у `pipeline/deploy.yml`).
 
 ## Коли ескалювати і кого кликати
 
