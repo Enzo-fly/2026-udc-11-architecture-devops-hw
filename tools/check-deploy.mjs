@@ -623,7 +623,63 @@ export const RULES = [
       return problems.length ? fail(`не закріплено: ${problems.join("; ")}`) : pass(`закріплено: ${count}`);
     },
   },
+  {
+    // post-mortem 2026-10-14, action item #1: v1.8.0 renamed DB_POOL_MAX to DB_POOL_SIZE in
+    // compose, config.js silently fell back to its local-dev default and the pool shrank to 4.
+    id: "P1",
+    title: "Кожну змінну оточення застосунку з compose читає app/src/config.js",
+    hint: "Назва змінної в environment: має збігатися з env.NAME у app/src/config.js — інакше застосунок мовчки візьме значення за замовчуванням для локальної розробки. Виправте назву в compose (або додайте читання в config.js). Змінні, які читає сам Node (TZ, NODE_ENV, NODE_OPTIONS, NODE_EXTRA_CA_CERTS), і сервіси, що не задають жодної змінної застосунку (наприклад, postgres), не перевіряються.",
+    check({ root, compose }) {
+      const configPath = join(root, APP_CONFIG);
+      if (!existsSync(configPath)) return skip(`${APP_CONFIG} не знайдено — нема з чим звіряти`);
+      const problem = composeProblem(compose);
+      if (problem) return problem;
+      const read = configEnvNames(readFileSync(configPath, "utf8"));
+      if (!read.size) return skip(`${APP_CONFIG}: не знайдено жодного env.NAME`);
+      const problems = [];
+      const checked = [];
+      for (const [name, svc] of services(compose)) {
+        const keys = envEntries(svc?.environment).map(([key]) => String(key));
+        if (!keys.some((key) => read.has(key))) continue; // not this app: a database, a proxy…
+        checked.push(name);
+        for (const key of keys) {
+          if (read.has(key) || RUNTIME_ENV.has(key)) continue;
+          const like = similarEnvNames(key, read, keys);
+          problems.push(`${name}: ${key} не читається${like.length ? ` (схожа: ${like.join(", ")})` : ""}`);
+        }
+      }
+      if (problems.length) return fail(problems.join("; "));
+      if (!checked.length) return skip("жоден сервіс compose не задає змінних застосунку");
+      return pass(`змінні ${checked.join(", ")} читаються в ${APP_CONFIG}`);
+    },
+  },
 ];
+
+const APP_CONFIG = "app/src/config.js";
+
+// Read by Node itself (or by libc for TZ), never by config.js — legitimate in compose.
+const RUNTIME_ENV = new Set(["TZ", "NODE_ENV", "NODE_OPTIONS", "NODE_EXTRA_CA_CERTS"]);
+
+/** Names the app reads: env.NAME or env["NAME"] (process.env.NAME included). */
+function configEnvNames(source) {
+  const names = new Set();
+  for (const m of source.matchAll(/\benv\s*(?:\.\s*([A-Za-z_]\w*)|\[\s*["'`]([A-Za-z_]\w*)["'`]\s*\])/g)) names.add(m[1] ?? m[2]);
+  return names;
+}
+
+/** Read names that share the most leading _-segments with `key` and the service does not set. */
+function similarEnvNames(key, read, keys) {
+  const segments = key.split("_");
+  const shared = (name) => {
+    const other = name.split("_");
+    let n = 0;
+    while (n < segments.length && segments[n] === other[n]) n += 1;
+    return n;
+  };
+  const candidates = [...read].filter((name) => !keys.includes(name)).map((name) => [name, shared(name)]);
+  const best = Math.max(0, ...candidates.map(([, n]) => n));
+  return best ? candidates.filter(([, n]) => n === best).map(([name]) => name) : [];
+}
 
 // ---------------------------------------------------------------- running
 

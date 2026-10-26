@@ -1,0 +1,209 @@
+# Поштомат громади: тести → збірка образу → деплой на VM з ручним погодженням.
+#
+# Щоб GitHub його запускав, файл має лежати в .github/workflows/deploy.yml.
+#
+# Що налаштувати в репозиторії (Settings → Environments → production):
+#   - Required reviewers — саме це вмикає ручне погодження; без них `environment:`
+#     нічого не зупиняє.
+#   - Deployment branches: лише main.
+#   - Environment secrets (не repository secrets — тоді їх бачить лише job деплою
+#     і лише після погодження):
+#       DEPLOY_HOST          адреса VM
+#       DEPLOY_USER          користувач для SSH (у групі docker, власник /opt/poshtomat)
+#       DEPLOY_SSH_KEY       приватний ключ лише для деплою
+#       DEPLOY_KNOWN_HOSTS   рядок(и) з `ssh-keyscan <host>`, звірені з ключем VM
+#       DATABASE_URL         postgres://poshtomat:<пароль>@192.0.2.10:5432/poshtomat
+#       SMS_TOKEN            токен SMS-провайдера
+#
+# Відкат: «Re-run job» для job deploy з попереднього успішного запуску — він розгорне
+# той самий digest. Якщо новий реліз не стає healthy, скрипт сам повертає попередній.
+
+name: deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Усе вимкнено за замовчуванням; кожен job просить лише те, що йому потрібно.
+permissions: {}
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "22"
+
+      - name: Тести
+        working-directory: app
+        run: npm test
+
+  build:
+    needs: test
+    # PR і запуски з інших гілок лише тестуються, образ не пушиться.
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image: ${{ steps.ref.outputs.repo }}@${{ steps.build.outputs.digest }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Імена в ghcr.io мають бути в нижньому регістрі.
+      - name: Ім'я образу
+        id: ref
+        run: echo "repo=${REGISTRY}/${GITHUB_REPOSITORY,,}" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
+
+      - uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4.6.0
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Збірка й публікація
+        id: build
+        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7.4.0
+        with:
+          context: app
+          file: deploy/Dockerfile
+          platforms: linux/amd64
+          push: true
+          tags: ${{ steps.ref.outputs.repo }}:sha-${{ github.sha }}
+          labels: |
+            org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
+            org.opencontainers.image.revision=${{ github.sha }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    # Тут job чекає на погодження reviewer'а з environment production.
+    environment: production
+    # Два деплої одночасно не йдуть; наступний чекає, поточний не скасовується.
+    concurrency:
+      group: production-deploy
+      cancel-in-progress: false
+    permissions:
+      contents: read  # deploy/compose.yaml
+      packages: read  # VM тягне образ з ghcr.io короткоживучим GITHUB_TOKEN цього job
+    env:
+      DEPLOY_DIR: /opt/poshtomat
+      IMAGE: ${{ needs.build.outputs.image }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: deploy/compose.yaml
+          sparse-checkout-cone-mode: false
+
+      - name: Налаштування SSH
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          (umask 077 && printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key)
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          # Ключ хоста лише з known_hosts: невідомий або змінений ключ = відмова.
+          cat > ~/.ssh/config <<EOF
+          Host vm
+            HostName ${DEPLOY_HOST}
+            User ${DEPLOY_USER}
+            IdentityFile ~/.ssh/deploy_key
+            IdentitiesOnly yes
+            StrictHostKeyChecking yes
+            BatchMode yes
+            ConnectTimeout 15
+          EOF
+
+      - name: Передача compose.yaml і .env на VM
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SMS_TOKEN: ${{ secrets.SMS_TOKEN }}
+        run: |
+          # Значення йдуть у .env в одинарних лапках (без підстановки $ у compose),
+          # тож лапок і переносів рядка в них бути не може.
+          for name in DATABASE_URL SMS_TOKEN; do
+            value="${!name}"
+            if [ -z "$value" ]; then echo "::error::секрет $name порожній"; exit 1; fi
+            case "$value" in *"'"*|*$'\n'*) echo "::error::секрет $name містить ' або перенос рядка"; exit 1;; esac
+          done
+
+          scp -q deploy/compose.yaml "vm:${DEPLOY_DIR}/compose.yaml.new"
+          # Секрети — через stdin, не в аргументах команди (їх видно в ps на VM)
+          # і не у файлі на runner'і.
+          printf "POSHTOMAT_IMAGE=%s\nDATABASE_URL='%s'\nSMS_TOKEN='%s'\n" \
+              "$IMAGE" "$DATABASE_URL" "$SMS_TOKEN" \
+            | ssh vm "umask 077 && cat > '${DEPLOY_DIR}/.env.new'"
+
+      - name: Вхід VM у ghcr.io
+        env:
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          printf '%s' "$GHCR_TOKEN" \
+            | ssh vm "docker login '${REGISTRY}' -u '${GITHUB_ACTOR}' --password-stdin" > /dev/null
+
+      - name: Розгортання
+        run: |
+          ssh vm bash -s -- "$DEPLOY_DIR" "$REGISTRY" <<'EOF'
+          set -euo pipefail
+          cd "$1"
+          dc() { docker compose -p poshtomat "$@"; }
+
+          # Нові файли перевіряються й образ тягнеться до того, як щось зміниться.
+          dc -f compose.yaml.new --env-file .env.new config --quiet
+          dc -f compose.yaml.new --env-file .env.new pull --quiet
+          docker logout "$2" > /dev/null
+
+          had_prev=false
+          if [ -f .env ]; then
+            cp -p .env .env.prev
+            cp -p compose.yaml compose.yaml.prev
+            had_prev=true
+          fi
+          mv compose.yaml.new compose.yaml
+          mv .env.new .env
+
+          if dc --env-file .env up -d --wait --wait-timeout 120 --remove-orphans; then
+            echo "Розгорнуто: $(grep '^POSHTOMAT_IMAGE=' .env | cut -d= -f2-)"
+            exit 0
+          fi
+
+          echo "::error::новий реліз не став healthy"
+          dc --env-file .env logs --tail 100 api worker || true
+          if $had_prev; then
+            echo "Повертаю попередній реліз"
+            mv compose.yaml.prev compose.yaml
+            mv .env.prev .env
+            dc --env-file .env up -d --wait --wait-timeout 120 --remove-orphans
+          fi
+          exit 1
+          EOF
+
+      - name: Прибирання
+        if: always()
+        run: |
+          ssh vm "docker logout '${REGISTRY}'; rm -f '${DEPLOY_DIR}/.env.new' '${DEPLOY_DIR}/compose.yaml.new'" > /dev/null 2>&1 || true
+          rm -f ~/.ssh/deploy_key

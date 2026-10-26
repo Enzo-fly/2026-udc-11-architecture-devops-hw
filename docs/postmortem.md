@@ -77,7 +77,7 @@
 
 | # | Дія | Тип | Власник (роль) | Як перевіримо, що зроблено |
 |---|---|---|---|---|
-| 1 | Нове правило в `tools/check-deploy.mjs`: кожна змінна оточення сервісів `api` і `worker` у `deploy/compose.yaml` має читатися в `app/src/config.js`. Виняток — змінні, які читає сам рантайм (`TZ`, `NODE_ENV`) | prevent | розробник, відповідальний за інфраструктуру VM | `npm run check:deploy`: на compose з v1.8.0 (`DB_POOL_SIZE`) — FAIL, на поточному — PASS; `npm run test:tools` зелений (Task D) |
+| 1 | Нове правило `P1` в `tools/check-deploy.mjs`: кожна змінна оточення сервісів `api` і `worker` у `deploy/compose.yaml` має читатися в `app/src/config.js`. Виняток — змінні, які читає сам рантайм (`TZ`, `NODE_ENV`) | prevent | розробник, відповідальний за інфраструктуру VM | `npm run check:deploy`: на compose з v1.8.0 (`DB_POOL_SIZE`) — FAIL, на поточному — PASS; `npm run test:tools` зелений (Task D) |
 | 2 | У продакшні (`NODE_ENV=production`) `loadConfig` падає на старті, якщо немає `DB_POOL_MAX`, `DATABASE_URL`, `SMS_BASE_URL` чи `SMS_TOKEN`, а не підставляє значення для локальної розробки | prevent | розробник бекенду | Юніт-тест: `loadConfig({ NODE_ENV: "production" })` без `DB_POOL_MAX` кидає помилку з назвою змінної. `docker compose up` з `DB_POOL_SIZE` замість `DB_POOL_MAX` не стартує, і в лозі є назва змінної |
 | 3 | Зміни в `deploy/` — окремим PR, без масових перестановок рядків. В описі PR — таблиця «змінна: було → стало» | prevent | обидва розробники (правило рев'ю) | У `.github/pull_request_template.md` є пункт про `deploy/`. Наступні 3 PR з `deploy/` мають таку таблицю |
 | 4 | Алерт `ApiDbPoolWaiting`: `db_pool_waiting > 0` протягом 2 хв → page | detect | черговий тижня | Прогін правила на `incident/metrics/2026-10-14.csv` спрацьовує о 14:03. На `incident/baseline/metrics-2026-10-13.csv` — жодного разу |
@@ -94,17 +94,23 @@
 
 ## Action item → правило перевірки (Task D)
 
-> Правило буде реалізоване в Task D. Нижче — що саме воно перевірятиме.
-
 - **Action item:** #1.
-- **Правило:** `C5` у `tools/check-deploy.mjs`. Кожна змінна з `environment:` сервісів
-  compose, що запускають застосунок з `app/`, має відповідати `env.<НАЗВА>` в
-  `app/src/config.js`, крім змінних, які читає сам рантайм (`TZ`, `NODE_ENV`).
-- **Тест:** `tools/test/check-deploy.test.mjs`:
-  - compose з v1.8.0, де є `DB_POOL_SIZE: "20"`, а `DB_POOL_MAX` немає, → **FAIL** з назвою змінної;
-  - коректний compose → **PASS**, хоча в ньому є `TZ: "Europe/Kyiv"`, а `environment:` записано як
-    список `- KEY=value`. Наївне правило «кожна змінна має бути в config.js» на `TZ`
-    впало б: її читає Node, а не `config.js`.
+- **Правило:** `P1` у `tools/check-deploy.mjs` («з post-mortem»). Кожна змінна з
+  `environment:` сервісів compose, що належать застосунку, має збігатися з `env.NAME`
+  (або `env["NAME"]`) в `app/src/config.js`. Інакше FAIL з назвою сервісу, змінної і
+  схожої назви, яку код читає: `api: DB_POOL_SIZE не читається (схожа: DB_POOL_MAX)`.
+  - **Що не перевіряється, бо це не помилки:** змінні, які читає сам Node (`TZ`, `NODE_ENV`, `NODE_OPTIONS`, `NODE_EXTRA_CA_CERTS`), і сервіси, що не задають жодної змінної застосунку, наприклад `postgres`.
+  - **Чому ID `P1`, а не запланований `C5`:** наявний тест CLI звіряє точний набір рядків `^[DCW]\d`. Нове правило з префіксом `C` його зламало б, а наявні тести ми не міняємо.
+- **Тест:** `tools/test/env-names.test.mjs`, 5 випадків. `npm run test:tools` — 25 з 25.
+  - **FAIL на ситуації з інциденту:** compose з v1.8.0 (`incident/changes/v1.8.0.diff:84-115`), де є `DB_POOL_SIZE: "20"`, а `DB_POOL_MAX` немає. Правило падає для `api` і `worker`, а `TZ` у повідомленні не згадує.
+  - **PASS на коректному compose, де наївне правило «кожна змінна має бути в config.js» впало б тричі:**
+    - на `TZ`/`NODE_ENV`, бо їх читає Node;
+    - на `environment:` у вигляді списку `- KEY=value`;
+    - на сервісі `postgres` з `POSTGRES_PASSWORD`, бо це не наш застосунок.
+  - **FAIL на інших членах класу:** одрук `SMS_RATE_PER_SECOND` (підказує `SMS_RATE_PER_SEC`) і змінна `COURIER_BASE_URL`, яку `config.js` перестав читати.
+  - **Межові випадки:** `env["NAME"]` вважається читанням; без `config.js` чи без сервісів застосунку — SKIP.
+  - **Інтеграційний:** власний `deploy/compose.yaml` репо — PASS.
+- **Перевірено:** `npm run check:deploy` дає `P1 PASS`, разом PASS 14, FAIL 0, SKIP 0. На копії репо, де в compose `DB_POOL_MAX` замінено на `DB_POOL_SIZE`: `P1 FAIL` для `api`, `worker` і `expire`, код виходу 1.
 - **Чому воно ловить клас проблем, а не лише цей інцидент:** воно не шукає саме
   `DB_POOL_SIZE`. Воно ловить будь-яку розбіжність назв між деплоєм і кодом: одрук
   (`SMS_RATE_PER_SECOND`), перейменування тільки на одному боці, змінну, яку код перестав
