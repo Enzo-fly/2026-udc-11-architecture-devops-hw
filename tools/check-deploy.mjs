@@ -628,7 +628,7 @@ export const RULES = [
     // compose, config.js silently fell back to its local-dev default and the pool shrank to 4.
     id: "P1",
     title: "Кожну змінну оточення застосунку з compose читає app/src/config.js",
-    hint: "Назва змінної в environment: має збігатися з env.NAME у app/src/config.js — інакше застосунок мовчки візьме значення за замовчуванням для локальної розробки. Виправте назву в compose (або додайте читання в config.js). Змінні, які читає сам Node (TZ, NODE_ENV, NODE_OPTIONS, NODE_EXTRA_CA_CERTS), і сервіси, що не задають жодної змінної застосунку (наприклад, postgres), не перевіряються.",
+    hint: "Назва змінної в environment: має збігатися з env.NAME у app/src/config.js — інакше застосунок мовчки візьме значення за замовчуванням для локальної розробки. Виправте назву в compose (або додайте читання в config.js). Змінні, які читає сам Node (TZ, NODE_ENV, NODE_OPTIONS, NODE_EXTRA_CA_CERTS), і сервіси, що не задають жодної змінної застосунку чи схожої на неї (наприклад, postgres), не перевіряються.",
     check({ root, compose }) {
       const configPath = join(root, APP_CONFIG);
       if (!existsSync(configPath)) return skip(`${APP_CONFIG} не знайдено — нема з чим звіряти`);
@@ -640,7 +640,9 @@ export const RULES = [
       const checked = [];
       for (const [name, svc] of services(compose)) {
         const keys = envEntries(svc?.environment).map(([key]) => String(key));
-        if (!keys.some((key) => read.has(key))) continue; // not this app: a database, a proxy…
+        // not this app (a database, a proxy…) only if no key is read and none looks like a read
+        // one — a service whose every app variable got renamed is still the app
+        if (!keys.some((key) => read.has(key) || similarEnvNames(key, read, keys).length)) continue;
         checked.push(name);
         for (const key of keys) {
           if (read.has(key) || RUNTIME_ENV.has(key)) continue;
@@ -660,11 +662,42 @@ const APP_CONFIG = "app/src/config.js";
 // Read by Node itself (or by libc for TZ), never by config.js — legitimate in compose.
 const RUNTIME_ENV = new Set(["TZ", "NODE_ENV", "NODE_OPTIONS", "NODE_EXTRA_CA_CERTS"]);
 
-/** Names the app reads: env.NAME or env["NAME"] (process.env.NAME included). */
+/** Names the app reads: env.NAME or env["NAME"] (process.env.NAME included) in code. */
 function configEnvNames(source) {
   const names = new Set();
-  for (const m of source.matchAll(/\benv\s*(?:\.\s*([A-Za-z_]\w*)|\[\s*["'`]([A-Za-z_]\w*)["'`]\s*\])/g)) names.add(m[1] ?? m[2]);
+  for (const m of codeOnly(source).matchAll(/\benv\s*(?:\.\s*([A-Za-z_]\w*)|\[\s*["'`]([A-Za-z_]\w*)["'`]\s*\])/g)) names.add(m[1] ?? m[2]);
   return names;
+}
+
+/**
+ * `source` without comments and with string literals emptied, so `// was env.DB_POOL_SIZE`
+ * or "env.X" in a message is not a read. A string right after `env[` is kept: that is
+ * the key being read. Regex literals are not recognised; config.js has none.
+ */
+function codeOnly(source) {
+  let out = "";
+  let i = 0;
+  while (i < source.length) {
+    const ch = source[i];
+    const next = source[i + 1];
+    if (ch === "/" && next === "/") {
+      while (i < source.length && source[i] !== "\n") i += 1;
+    } else if (ch === "/" && next === "*") {
+      const end = source.indexOf("*/", i + 2);
+      i = end === -1 ? source.length : end + 2;
+      out += " ";
+    } else if (ch === '"' || ch === "'" || ch === "`") {
+      let j = i + 1;
+      while (j < source.length && source[j] !== ch && (ch === "`" || source[j] !== "\n")) j += source[j] === "\\" ? 2 : 1;
+      const literal = source.slice(i, j + 1);
+      out += /\benv\s*\[\s*$/.test(out) ? literal : ch + ch;
+      i = j + 1;
+    } else {
+      out += ch;
+      i += 1;
+    }
+  }
+  return out;
 }
 
 /** Read names that share the most leading _-segments with `key` and the service does not set. */

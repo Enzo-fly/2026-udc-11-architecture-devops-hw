@@ -51,6 +51,11 @@ jobs:
         working-directory: app
         run: npm test
 
+      # P1: кожна змінна застосунку з deploy/compose.yaml читається в config.js
+      # (docs/postmortem.md, action item #1) — до збірки образу, а не після інциденту.
+      - name: Перевірка конфігурації деплою
+        run: npm run check:deploy
+
   build:
     needs: test
     # PR і запуски з інших гілок лише тестуються, образ не пушиться.

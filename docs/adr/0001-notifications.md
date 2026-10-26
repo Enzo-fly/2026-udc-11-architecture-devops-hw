@@ -187,7 +187,7 @@ CREATE INDEX parcel_jobs_due ON parcel_jobs (state, due_at);
 
 ```sql
 WITH moved AS (            -- 0 рядків: посилку вже забрали → далі нічого не змінюється
-  UPDATE parcels SET status = 'returning', returned_at = now()
+  UPDATE parcels SET status = 'returning'
    WHERE id = $1 AND status = 'waiting'
   RETURNING id
 ), reminders AS (
@@ -201,6 +201,10 @@ SELECT id, 'courier_return', now() FROM moved;
 Скасування нагадувань і `courier_return` залежать від `moved`: якщо посилку вже забрали,
 `UPDATE` не змінив жодного рядка, і повернення не створюється. Саме завдання `return_72h`
 worker тоді позначає `cancelled`.
+
+`returned_at` цей `UPDATE` не пише: як і зараз, він ставиться лише разом зі статусом `returned`
+(`app/src/parcels.js:83-86`). Перехід `returning → returned` робить `courier_return`, коли служба
+доставки прийняла заявку на повернення, — тож у `returning` поле лишається `NULL`.
 
 - Код перестає діяти одразу; посилка фізично лишається в комірці, доки її не забере кур'єр.
 - `courier_return` викликає `requestReturn` (`app/src/courier.js:6-19`) з повторами й backoff,

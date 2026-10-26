@@ -83,6 +83,26 @@ test("P1: env[\"NAME\"] counts as reading; without config.js or app services the
   assert.equal(check({ db: { image: "postgres:17.6", environment: { POSTGRES_DB: "x" } } }).status, "SKIP");
 });
 
+test("P1: a service whose every app variable is misnamed still fails, not skips", () => {
+  const result = check({ worker: { image: "w:1", environment: { TZ: "Europe/Kyiv", DB_POOL_SIZE: "20" } } });
+  assert.equal(result.status, "FAIL");
+  // DB_POOL_WAIT_MS is a candidate too: the service does not set it here
+  assert.match(result.message, /worker: DB_POOL_SIZE не читається \(схожа: DB_POOL_MAX, DB_POOL_WAIT_MS\)/);
+});
+
+test("P1: env.NAME in a comment or a string is not a read", () => {
+  const config = CONFIG.replace(
+    "// sensible default for local dev",
+    '// v1.8.0 used env.DB_POOL_SIZE /* env.SMS_RATE */\n    hint: "set env.SMS_RATE or \'env.DB_POOL_SIZE\'",',
+  );
+  const result = check({ worker: { image: "w:1", environment: { ...v180env, SMS_RATE: "8" } } }, config);
+  assert.equal(result.status, "FAIL");
+  assert.match(result.message, /worker: DB_POOL_SIZE не читається/);
+  assert.match(result.message, /worker: SMS_RATE не читається/);
+  // the real reads around them still count, URLs with // inside strings included
+  assert.doesNotMatch(result.message, /DATABASE_URL|SMS_BASE_URL|COURIER_BASE_URL/);
+});
+
 test("P1: the repo's own deploy/compose.yaml passes", () => {
   const result = P1.check(loadContext(REPO));
   assert.equal(result.status, "PASS", result.message);
