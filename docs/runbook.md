@@ -10,7 +10,10 @@
 > відкат переносить їх назад (`pipeline/deploy.yml`, `mv … .prev`), а файли невдалого релізу
 > лишає як `compose.yaml.failed` і `.env.failed`. Після невдалого **першого** деплою немає й
 > `compose.yaml` та `.env`: скрипт зупиняє api і worker і лишає тільки `.failed`. Логи тоді —
-> `docker compose -p poshtomat -f compose.yaml.failed --env-file .env.failed logs worker`. Проєкт compose
+> `docker compose -p poshtomat -f compose.yaml.failed --env-file .env.failed logs worker`.
+> Якщо деплой упав ще на перевірці файлів чи завантаженні образу (`config --quiet`, `pull --quiet`),
+> на VM нічого не змінилось: працює попередній реліз (якщо деплой перший — нічого), файлів
+> `.failed` немає. Причину шукайте в лозі кроку «Розгортання» в GitHub Actions. Проєкт compose
 > — `poshtomat`, тому всі команди мають вигляд `docker compose -p poshtomat --env-file .env …`.
 > Шлях до теки й ім'я VM звірте один раз заздалегідь, а не під час інциденту.
 > Команди з позначкою «з репо» працюють на ноутбуці з кореня репозиторію в Git Bash.
