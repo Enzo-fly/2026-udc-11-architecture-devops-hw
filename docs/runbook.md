@@ -113,13 +113,20 @@ ssh poshtomat-prod-1 'cd /opt/poshtomat && id=$(docker compose -p poshtomat --en
 лише пише в лог і продовжує цикл. Тому одразу після команди вище:
 
 ```bash
-ssh poshtomat-prod-1 'cd /opt/poshtomat && docker compose -p poshtomat --env-file .env logs --since 2m worker | grep -c "\"msg\":\"notify round failed\""'
+ssh poshtomat-prod-1 'cd /opt/poshtomat && logs=$(docker compose -p poshtomat --env-file .env logs --since 2m worker) && printf "%s\n" "$logs" | grep -c "\"msg\":\"notify round failed\""'
 ```
 
 - `0` — **так**: за 2 хв (~12 раундів) жоден раунд не впав.
 - Більше `0` — **ні**: worker живий, але посилки не обробляє. Подивіться поле `error` у цих
-  рядках (`… | grep "notify round failed" | tail -3`) і ескалюйте. `sms send failed` сюди не
-  входить: поодинокі 429 і TLS-тайм-аути бувають щодня.
+  рядках і ескалюйте. `sms send failed` сюди не входить: поодинокі 429 і TLS-тайм-аути
+  бувають щодня:
+
+  ```bash
+  ssh poshtomat-prod-1 'cd /opt/poshtomat && docker compose -p poshtomat --env-file .env logs --since 2m worker | grep "notify round failed" | tail -3'
+  ```
+
+- Числа немає, а є помилка `docker compose` — лог не прочитано, тож перевірка не відбулась.
+  Це не «так»: повторіть команду, а якщо помилка лишається, ескалюйте.
 
 Обидві перевірки за вікно 60 с робить і скрипт деплою (`up_and_wait` у `pipeline/deploy.yml`).
 

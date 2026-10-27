@@ -214,9 +214,11 @@ jobs:
           # /health не ходить у БД (app/src/server.js:37), тож healthy ще не означає, що API
           # працює. Той самий пробний запит, що й у runbook («Перші 5 хвилин», крок 2):
           # неіснуючий токен API перевіряє в БД через пул і відповідає 403. Неправильний
-          # DATABASE_URL чи недоступна БД дадуть 500/503 або тайм-аут 2 с. У репо сховище
-          # в пам'яті, а на проді за тим самим інтерфейсом PostgreSQL (app/src/db.js:1-2),
-          # тож 403 на VM означає, що пошук сесії в БД пройшов.
+          # DATABASE_URL чи недоступна БД дадуть 500/503 або тайм-аут 2 с. Це контракт
+          # продакшну: там за інтерфейсом пулу стоїть PostgreSQL (app/src/db.js:1-2). У репо
+          # БД немає: createPool викликається без config.dbUrl (app/src/server.js, main),
+          # DATABASE_URL ніде не використовується, сховище в пам'яті. Тож локально проба дає
+          # 403 завжди, а як перевірка БД має сенс лише на VM.
           db_probe() {
             dc --env-file .env exec -T api node -e "fetch('http://127.0.0.1:' + (process.env.PORT || 8080) + '/admin/parcels', { headers: { authorization: 'Bearer probe' }, signal: AbortSignal.timeout(2000) }).then(r => { console.log('проба БД:', r.status); process.exit(r.status === 403 ? 0 : 1); }, e => { console.log('проба БД:', e.message); process.exit(1); })"
           }
@@ -234,7 +236,7 @@ jobs:
           # `sms send failed` не рахуємо: поодинокі 429 і TLS-тайм-аути бувають щодня.
           WORKER_WINDOW=60
           up_and_wait() {
-            local id before since t0 left after failed
+            local id before since t0 left after logs failed
             dc --env-file .env up -d --remove-orphans || return 1
             id=$(dc --env-file .env ps -a -q worker)
             [ -n "$id" ] || { echo "worker не запущено"; return 1; }
@@ -247,7 +249,8 @@ jobs:
             if [ "$left" -gt 0 ]; then sleep "$left"; fi
             after=$(docker inspect -f '{{.State.Status}} {{.RestartCount}}' "$id")
             [ "$after" = "running $before" ] || { echo "worker нестабільний: $after (було $before)"; return 1; }
-            failed=$(docker logs --since "$since" "$id" 2>&1 | grep '"msg":"notify round failed"' || true)
+            logs=$(docker logs --since "$since" "$id" 2>&1) || { echo "не вдалося прочитати лог worker"; return 1; }
+            failed=$(printf '%s\n' "$logs" | grep '"msg":"notify round failed"' || true)
             [ -z "$failed" ] || { echo "worker не обробляє раунди: $(printf '%s\n' "$failed" | wc -l) × notify round failed"; printf '%s\n' "$failed" | tail -3; return 1; }
           }
 
