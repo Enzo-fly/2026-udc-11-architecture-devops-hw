@@ -8,7 +8,9 @@
 > а після кожного **успішного** деплою (крім першого) лишає попередні — `compose.yaml.prev`
 > і `.env.prev`. Після першого деплою їх немає. Після невдалого їх теж немає: автоматичний
 > відкат переносить їх назад (`pipeline/deploy.yml`, `mv … .prev`), а файли невдалого релізу
-> лишає як `compose.yaml.failed` і `.env.failed`. Проєкт compose
+> лишає як `compose.yaml.failed` і `.env.failed`. Після невдалого **першого** деплою немає й
+> `compose.yaml` та `.env`: скрипт зупиняє api і worker і лишає тільки `.failed`. Логи тоді —
+> `docker compose -p poshtomat -f compose.yaml.failed --env-file .env.failed logs worker`. Проєкт compose
 > — `poshtomat`, тому всі команди мають вигляд `docker compose -p poshtomat --env-file .env …`.
 > Шлях до теки й ім'я VM звірте один раз заздалегідь, а не під час інциденту.
 > Команди з позначкою «з репо» працюють на ноутбуці з кореня репозиторію в Git Bash.
@@ -113,7 +115,7 @@ ssh poshtomat-prod-1 'cd /opt/poshtomat && id=$(docker compose -p poshtomat --en
 лише пише в лог і продовжує цикл. Тому одразу після команди вище:
 
 ```bash
-ssh poshtomat-prod-1 'cd /opt/poshtomat && logs=$(docker compose -p poshtomat --env-file .env logs --since 2m worker) && printf "%s\n" "$logs" | grep -c "\"msg\":\"notify round failed\""'
+ssh poshtomat-prod-1 'cd /opt/poshtomat && logs=$(docker compose -p poshtomat --env-file .env logs --since 2m worker) && { printf "%s\n" "$logs" | grep -c "\"msg\":\"notify round failed\"" || [ $? -eq 1 ]; }'
 ```
 
 - `0` — **так**: за 2 хв (~12 раундів) жоден раунд не впав.

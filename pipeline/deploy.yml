@@ -200,7 +200,8 @@ jobs:
           # Нові файли перевіряються й образ тягнеться до того, як щось зміниться.
           dc -f compose.yaml.new --env-file .env.new config --quiet
           dc -f compose.yaml.new --env-file .env.new pull --quiet
-          docker logout "$2" > /dev/null
+          # docker logout — лише в кроці «Прибирання», не тут: якщо попереднього образу на VM
+          # уже немає (наприклад, після prune), автовідкат стягне його сам через `up -d`.
 
           had_prev=false
           if [ -f .env ]; then
@@ -217,8 +218,9 @@ jobs:
           # DATABASE_URL чи недоступна БД дадуть 500/503 або тайм-аут 2 с. Це контракт
           # продакшну: там за інтерфейсом пулу стоїть PostgreSQL (app/src/db.js:1-2). У репо
           # БД немає: createPool викликається без config.dbUrl (app/src/server.js, main),
-          # DATABASE_URL ніде не використовується, сховище в пам'яті. Тож локально проба дає
-          # 403 завжди, а як перевірка БД має сенс лише на VM.
+          # DATABASE_URL ніде не використовується, сховище в пам'яті. Тож проба дає 403 завжди,
+          # а як перевірка БД має сенс лише тоді, коли розгорнутий застосунок справді працює з
+          # PostgreSQL (припущення моделі; образ, зібраний з цього app/, — ні).
           db_probe() {
             dc --env-file .env exec -T api node -e "fetch('http://127.0.0.1:' + (process.env.PORT || 8080) + '/admin/parcels', { headers: { authorization: 'Bearer probe' }, signal: AbortSignal.timeout(2000) }).then(r => { console.log('проба БД:', r.status); process.exit(r.status === 403 ? 0 : 1); }, e => { console.log('проба БД:', e.message); process.exit(1); })"
           }
@@ -268,6 +270,10 @@ jobs:
             echo "::error::попереднього релізу немає (перший деплой) — відкочувати нема на що; зупиняю новий"
             # Не down: зупинені контейнери лишаються для `logs`, але порт закрито і worker не шле SMS.
             dc --env-file .env stop api worker || true
+            # Активних файлів не лишаємо (лише .failed): інакше наступний деплой збереже цей
+            # поганий реліз як .prev, і його автовідкат повернув би саме його.
+            mv compose.yaml compose.yaml.failed
+            mv .env .env.failed
             exit 1
           fi
           echo "Повертаю попередній реліз: $(grep '^POSHTOMAT_IMAGE=' .env.prev | cut -d= -f2-)"
