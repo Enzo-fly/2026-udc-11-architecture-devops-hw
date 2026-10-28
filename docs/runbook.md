@@ -12,8 +12,8 @@
 > «Що робити», рядок 1), а файли невдалого релізу
 > лишає як `compose.yaml.failed` і `.env.failed`. Після невдалого **першого** деплою немає й
 > `compose.yaml` та `.env`: скрипт зупиняє api і worker і лишає тільки `.failed`. Стан і логи тоді —
-> `docker compose -p poshtomat -f compose.yaml.failed --env-file .env.failed ps -a` і
-> `docker compose -p poshtomat -f compose.yaml.failed --env-file .env.failed logs worker`
+> `ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -p poshtomat -f compose.yaml.failed --env-file .env.failed ps -a"` і
+> `ssh poshtomat-prod-1 "cd /opt/poshtomat && docker compose -p poshtomat -f compose.yaml.failed --env-file .env.failed logs worker"`
 > (команди з `--env-file .env` нижче в цьому разі не спрацюють).
 > Якщо деплой упав ще на перевірці файлів чи завантаженні образу (`config --quiet`, `pull --quiet`),
 > на VM нічого не змінилось: працює попередній реліз (якщо деплой перший — нічого), файлів
