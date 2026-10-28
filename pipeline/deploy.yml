@@ -282,7 +282,7 @@ jobs:
           if up_and_wait; then
             echo "::error::відкат вдався, працює попередній реліз; новий — у compose.yaml.failed і .env.failed"
           else
-            echo "::error::ВІДКАТ НЕ ВДАВСЯ: не працює ні новий, ні попередній реліз — ескалюйте (docs/runbook.md)"
+            echo "::error::ВІДКАТ НЕ ВДАВСЯ: попередній реліз запущено, але й він не пройшов перевірок — ескалюйте (docs/runbook.md)"
             dc --env-file .env ps -a || true
           fi
           exit 1
